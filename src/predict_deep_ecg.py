@@ -13,7 +13,7 @@ from ecg_models import make_model
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("waveform", type=Path)
-    ap.add_argument("--run", type=Path, default=ROOT / "artifacts/e0_resnet_omi_v1")
+    ap.add_argument("--run", type=Path, default=ROOT / "artifacts/e0_resnet_omi_v1_run")
     ap.add_argument("--seed", type=int, default=17)
     ap.add_argument("--device", choices=("cpu", "cuda"), default="cpu")
     args = ap.parse_args()

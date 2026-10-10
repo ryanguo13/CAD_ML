@@ -1,0 +1,32 @@
+{
+  "name": "ecgfm_base_frozen_v1",
+  "data_dir": "artifacts/data_v1",
+  "cache_dir": "artifacts/ecgfm_embeddings_v1",
+  "checkpoint": "artifacts/foundation/ecgfm/mimic_iv_ecg_physionet_pretrained.pt",
+  "checkpoint_sha256": "4d0142bcb485eb9f0c7845e0c19ff3463f6ae9d0e458eab69136efe90ceb9b7e",
+  "huggingface_revision": "584219ea492cdeef2e19ffbdf9c6ecc874ba427e",
+  "checkpoint_url": "https://huggingface.co/wanglab/ecg-fm/resolve/584219ea492cdeef2e19ffbdf9c6ecc874ba427e/mimic_iv_ecg_physionet_pretrained.pt",
+  "official_repository_commit": "9f926f1911bb9f24789b5c6407677d58ad753054",
+  "fairseq_signals_commit": "f8f0ff1c788a82c2059cb452cd5462898867489e",
+  "preprocessing": {
+    "sample_rate_hz": 500,
+    "input_units": "mV",
+    "standardization": "ecg-transform_0.1.3_Standardize_per_lead_over_full_10s_before_segmentation",
+    "window_ranges": [[0, 2500], [2500, 5000]],
+    "lead_order": ["I", "II", "III", "aVR", "aVL", "aVF", "V1", "V2", "V3", "V4", "V5", "V6"],
+    "additional_filtering": "none"
+  },
+  "readout_version": "final_transformer_x_nonzero_mean_per_5s_window_ordered_concatenation_v1",
+  "embedding_dim_per_window": 768,
+  "cache_dtype": "float16",
+  "batch_size_records": 4,
+  "amp": true,
+  "device": "cuda",
+  "pretraining_data": ["MIMIC-IV-ECG_v1.0", "PhysioNet_Challenge_2021_v1.0.3_including_PTB-XL"],
+  "pretraining_overlap": {
+    "angiography": "not_reported_as_pretraining_source_individual_patient_overlap_unverifiable",
+    "PTB-XL": "potential_overlap_not_a_strict_unseen_external_benchmark",
+    "MIMIC-IV-ECG": "known_pretraining_source"
+  },
+  "license": "MIT"
+}

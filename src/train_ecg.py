@@ -17,7 +17,7 @@ from torch.utils.data import DataLoader, Dataset
 
 from ecg_data import ROOT, load_partition, read_waveform, save_json, sha256, verify_manifest
 from ecg_evaluation import fit_platt, report_target, working_threshold
-from ecg_models import LocalModel, make_model, masked_bce
+from ecg_models import FrozenEmbeddingHead, LocalModel, make_model, masked_bce
 from scipy.special import expit
 
 
@@ -53,7 +53,14 @@ def seed_all(seed):
 
 def loader(rows, config, train=False):
     generator = torch.Generator().manual_seed(config.get("active_seed", 17))
-    return DataLoader(WaveDataset(rows, config["targets"]), batch_size=config["batch_size"], shuffle=train,
+    if config["model"] in ("ecgfm_head", "ecgcpc_query", "ecgcpc_mean"):
+        from foundation_ecgfm import EmbeddingDataset
+        dataset = EmbeddingDataset(rows, config["targets"], ROOT / config["cache_dir"])
+        if config["model"] == "ecgcpc_mean":
+            dataset.values = np.load(ROOT / config["cache_dir"] / "mean_embeddings.npy", mmap_mode="r")
+    else:
+        dataset = WaveDataset(rows, config["targets"])
+    return DataLoader(dataset, batch_size=config["batch_size"], shuffle=train,
                       num_workers=config["num_workers"], pin_memory=config["device"] == "cuda", generator=generator)
 
 
@@ -85,15 +92,39 @@ def fit_summary(model, batches, device):
         model.local.summary_std.copy_(std.float().clamp_min(1e-6))
 
 
+def fit_embedding_scale(model, batches, device):
+    total = torch.zeros_like(model.feature_mean, dtype=torch.float64)
+    squares, count = total.clone(), 0
+    for x, _ in batches:
+        x = x.to(device).double()
+        total += x.sum(0)
+        squares += x.square().sum(0)
+        count += len(x)
+    mean = total / count
+    std = (squares / count - mean.square()).clamp_min(0).sqrt()
+    with torch.no_grad():
+        model.feature_mean.copy_(mean.float())
+        model.feature_std.copy_(std.float().clamp_min(1e-6))
+
+
 def train(config, config_path, out, data):
     if out.exists():
         raise FileExistsError("choose a new out_dir; previous experiments are not overwritten")
     manifest = verify_manifest(data)
+    cache_manifest_sha256 = None
+    if config["model"] in ("ecgfm_head", "ecgcpc_query", "ecgcpc_mean"):
+        if config["model"] == "ecgfm_head":
+            from foundation_ecgfm import verify_cache
+        else:
+            from foundation_ecgcpc import verify_cache
+        verify_cache(ROOT / config["cache_dir"], data)
+        cache_manifest_sha256 = sha256(ROOT / config["cache_dir"] / "manifest.json")
     if config["device"] == "cuda" and not torch.cuda.is_available():
         raise RuntimeError("CUDA required by protocol but unavailable; do not silently change experiment hardware")
     out.mkdir(parents=True)
     save_json(out / "protocol.json", {"config": config, "config_sha256": sha256(config_path),
                                      "manifest_sha256": sha256(data / "manifest.json"),
+                                     "cache_manifest_sha256": cache_manifest_sha256,
                                      "architecture_sha256": sha256(ROOT / "configs/model_architecture_v1.json"),
                                      "code_sha256": {p.name: sha256(p) for p in (ROOT / "src").glob("*.py")},
                                      "dependencies": {"torch": torch.__version__, "numpy": np.__version__},
@@ -116,6 +147,8 @@ def train(config, config_path, out, data):
             if isinstance(model, LocalModel):
                 print("Fitting amplitude summary statistics on train patients only", flush=True)
                 fit_summary(model, train_loader, config["device"])
+            if isinstance(model, FrozenEmbeddingHead):
+                fit_embedding_scale(model, train_loader, config["device"])
             optimizer = torch.optim.AdamW(model.parameters(), lr=config["learning_rate"], weight_decay=config["weight_decay"])
             amp = config["amp"] and config["device"] == "cuda"
             scaler = torch.amp.GradScaler(config["device"], enabled=amp)
@@ -159,6 +192,7 @@ def train(config, config_path, out, data):
                     torch.save({"state_dict": model.state_dict(), "model": config["model"], "targets": config["targets"],
                                 "seed": seed, "epoch": epoch, "selection_OMI_AP": ap, "trainable_parameters": parameters,
                                 "manifest_sha256": sha256(data / "manifest.json"),
+                                "cache_manifest_sha256": cache_manifest_sha256,
                                 "architecture_sha256": sha256(ROOT / "configs/model_architecture_v1.json")}, out / f"seed_{seed}_best.pt")
                 print(json.dumps({"seed": seed, **item}), flush=True)
                 save_json(out / "status.json", {**progress, "active_seed": seed, "epoch": epoch})
@@ -178,6 +212,14 @@ def evaluate(config, out, data):
     protocol = json.loads((out / "protocol.json").read_text(encoding="utf-8"))
     if config != protocol["config"] or sha256(data / "manifest.json") != protocol["manifest_sha256"]:
         raise ValueError("experiment configuration or data lock differs from training")
+    if config["model"] in ("ecgfm_head", "ecgcpc_query", "ecgcpc_mean"):
+        if config["model"] == "ecgfm_head":
+            from foundation_ecgfm import verify_cache
+        else:
+            from foundation_ecgcpc import verify_cache
+        verify_cache(ROOT / config["cache_dir"], data)
+        if sha256(ROOT / config["cache_dir"] / "manifest.json") != protocol["cache_manifest_sha256"]:
+            raise ValueError("embedding provenance differs from training")
     if (out / "metrics.json").exists():
         raise FileExistsError("evaluation already recorded; do not repeatedly evaluate or overwrite")
     state = json.loads((out / "status.json").read_text(encoding="utf-8"))

@@ -43,6 +43,38 @@ class ResNet(nn.Module):
         return torch.cat([head(z) for head in self.heads], 1)
 
 
+class FrozenEmbeddingHead(nn.Module):
+    """Train-only feature scaling, 1536 -> 128 projection, independent heads."""
+    def __init__(self, targets=("OMI",), input_dim=1536):
+        super().__init__()
+        self.register_buffer("feature_mean", torch.zeros(input_dim))
+        self.register_buffer("feature_std", torch.ones(input_dim))
+        self.project = nn.Sequential(nn.Linear(input_dim, 128), nn.GELU(), nn.Dropout(.2))
+        self.heads = nn.ModuleList([nn.Linear(128, 1) for _ in targets])
+
+    def forward(self, x):
+        z = self.project((x - self.feature_mean) / self.feature_std)
+        return torch.cat([head(z) for head in self.heads], 1)
+
+
+class CPCQueryHead(nn.Module):
+    """The benchmark's original 16-head query pooling, on all cached tokens."""
+    def __init__(self, targets=("OMI",)):
+        super().__init__()
+        import sys
+        from foundation_ecgcpc import SOURCE
+        if str(SOURCE) not in sys.path:
+            sys.path.insert(0, str(SOURCE))
+        from clinical_ts.template_modules import ShapeConfig
+        from clinical_ts.utils.heads import LearnableQueryAttentionPoolingHead, LearnableQueryAttentionPoolingHeadConfig
+        self.head = LearnableQueryAttentionPoolingHead(
+            LearnableQueryAttentionPoolingHeadConfig(heads=16, bias=False),
+            ShapeConfig(channels=512, length=1200), len(targets))
+
+    def forward(self, x):
+        return self.head(seq=x)["seq"]
+
+
 class TemporalResidual(nn.Module):
     def __init__(self, width, kernel, dilation):
         super().__init__()
@@ -144,4 +176,10 @@ def make_model(name, targets):
         return ResNet(targets)
     if name == "local":
         return LocalModel(architecture(), targets)
-    raise ValueError("supported trainable comparisons: resnet, local; foundation models require audited checkpoints")
+    if name == "ecgfm_head":
+        return FrozenEmbeddingHead(targets)
+    if name == "ecgcpc_query":
+        return CPCQueryHead(targets)
+    if name == "ecgcpc_mean":
+        return nn.Linear(512, len(targets))
+    raise ValueError("unsupported model; foundation models require audited checkpoints")

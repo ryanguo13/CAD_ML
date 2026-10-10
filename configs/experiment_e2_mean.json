@@ -1,0 +1,39 @@
+{
+  "name": "e2_ecgcpc_mean_omi_v1",
+  "protocol_version": "1.0",
+  "data_dir": "artifacts/data_v1",
+  "cache_dir": "artifacts/ecgcpc_tokens_v1",
+  "out_dir": "artifacts/e2_ecgcpc_mean_omi_v1",
+  "model": "ecgcpc_mean",
+  "targets": [
+    "OMI"
+  ],
+  "task_weights": {
+    "OMI": 1.0,
+    "AMI": 0.5
+  },
+  "seeds": [
+    17,
+    43,
+    101
+  ],
+  "epochs": 8,
+  "batch_size": 32,
+  "accumulation_steps": 1,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "selection_metric": "OMI_average_precision",
+  "calibration": "independent_platt_intercept_and_slope",
+  "working_point_sensitivity": 0.95,
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 20261010,
+  "num_workers": 0,
+  "amp": true,
+  "device": "cuda",
+  "feature_scaling": "none_native_final_S4_tokens",
+  "class_reweighting": false,
+  "augmentation": "none",
+  "echo_enabled": false,
+  "evaluation_status": "internal_previously_explored_source_not_external_validation",
+  "readout": "token_mean_then_linear_with_bias_control"
+}

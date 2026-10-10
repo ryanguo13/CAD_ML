@@ -1,0 +1,38 @@
+{
+  "name": "ecgcpc_s4_frozen_v1",
+  "data_dir": "artifacts/data_v1",
+  "cache_dir": "artifacts/ecgcpc_tokens_v1",
+  "checkpoint": "artifacts/foundation/ecgcpc/ECG-CPC Checkpoint/last_11597276.ckpt",
+  "checkpoint_sha256": "bc253edc6ac279ce2caec86d3c3a21b740e43735ca03be1dc7c50e630b0ad4cf",
+  "checkpoint_url": "https://api.figshare.com/v2/file/download/58173919?version=1&metadata=1",
+  "checkpoint_zip_md5": "7cdd0d54786b4d98248afc6dce63beea",
+  "figshare_article": 30192604,
+  "figshare_file": 58173919,
+  "official_repository_commit": "238409835ef55358a10bbc3459dfa9aaa91ad5e5",
+  "preprocessing": {
+    "sample_rate_hz": 240,
+    "input_units": "mV",
+    "resampling": "resampy_0.4.3_default_kaiser_best_500_to_240_axis_time",
+    "window_seconds": 10,
+    "normalization": "none",
+    "additional_filtering": "none",
+    "lead_order": ["I", "II", "III", "aVR", "aVL", "aVF", "V1", "V2", "V3", "V4", "V5", "V6"]
+  },
+  "encoder": {"features": [512, 512, 512, 512], "kss": [3, 1, 1, 1], "strides": [2, 1, 1, 1]},
+  "predictor": {"model_dim": 512, "state_dim": 8, "layers": 4, "causal": true, "dropout": 0.2, "tie_dropout": true, "prenorm": false, "batchnorm": false, "backbone": "s42"},
+  "configuration_authority": "official_pretraining_and_downloaded_downstream_yaml_with_strict_checkpoint_shapes_and_1200_step_FFT_buffers; serialized_hparams_contain_defaults",
+  "readout_version": "official_final_S4_sequence_1200x512_then_official_16_head_query_attention_v1",
+  "cauchy_backend": "exact_torch_conjugate_pair_sum_v1",
+  "cache_dtype": "float16",
+  "batch_size_records": 8,
+  "amp": false,
+  "device": "cuda",
+  "pretraining_data": ["HEEDB"],
+  "pretraining_overlap": {
+    "angiography": "not_reported_as_pretraining_source_individual_patient_overlap_unverifiable",
+    "PTB-XL": "not_reported_as_pretraining_source; downloaded_YAML_is_downstream_configuration_not_evidence_of_checkpoint_finetuning",
+    "MIMIC-IV-ECG": "not_reported_as_pretraining_source_individual_patient_overlap_unverifiable"
+  },
+  "license_weights": "CC_BY_4.0",
+  "license_code": "no_repository_LICENSE_file_in_pinned_archive; upstream_component_terms_require_review_before_distribution"
+}
