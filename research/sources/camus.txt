@@ -1,0 +1,21 @@
+CAMUS project
+CAMUS
+Cardiac Acquisitions for
+Multi-structure Ultrasound Segmentation
+Download the CAMUS dataset
+Overview
+Datasets
+Evaluation
+Results - leaderboard
+Contact
+Overview
+General context
+Scientific interests
+Organizers
+The goal of this project is to provide all the materials to the community to resolve the problem of echocardiographic image segmentation and volume estimation from 2D ultrasound sequences (both two and four-chamber views). To this aim, the following solutions were set-up
+introduction of the largest publicly-available and fully-annotated dataset for 2D echocardiographic assessment (to our knowledge). The CAMUS dataset, containing 2D apical four-chamber and two-chamber view sequences acquired from 500 patients, is made available for download
+Please note that the online evaluation platform has been closed.
+This work has published to IEEE TMI journal. You must cite this paper for any use of the CAMUS database
+S. Leclerc, E. Smistad, J. Pedrosa, A. Ostvik, et al.
+"Deep Learning for Segmentation using an Open Large-Scale Dataset in 2D Echocardiography" in IEEE Transactions on Medical Imaging, vol. 38, no. 9, pp. 2198-2210, Sept. 2019.
+doi: 10.1109/TMI.2019.2900516

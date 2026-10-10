@@ -1,0 +1,74 @@
+The GU-ECG Database: ECG Datasets for Detection and Classification of Acute Myocardial Ischaemia Through Machine Learning - Mendeley Data
+Skip to main content
+FAQ
+Sign In / Register
+Sign In / Register
+FAQ
+The GU-ECG Database: ECG Datasets for Detection and Classification of Acute Myocardial Ischaemia Through Machine Learning
+Published: 16 February 2021| Version 1 | DOI: 10.17632/zhr5zsngtg.1
+Contributors:
+Merve Begum Terzi,
+Adnan Abaci,
+Orhan Arikan, Mustafa Candemir, Mehmet Dedeoglu
+Description
+Gazi University ECG (GU-ECG) database is a set of ECG data acquired from 74 coronary artery disease patients with severe stenosis (>70%) in at least one coronary artery who had symptoms of chest pain and were planned to undergo elective percutaneous transluminal coronary angioplasty (PTCA) at Department of Cardiology, Faculty of Medicine, Gazi University. It is constructed as a result of a clinical research study performed to investigate morphological anomalies in ECG signals that occur during complete coronary artery occlusion caused by PTCA, which reduces myocardial blood flow and induces acute myocardial ischaemia (AMI), leading to significant changes in ST segment and T wave of ECG [1,2].
+Before PTCA, 12-lead pre-inflation ECG recordings were continuously acquired prior to catheter insertion to coronary artery at cardiac catheterization laboratory. During PTCA, 12-lead inflation ECG recordings that started during balloon dilatation, then continued throughout balloon inflation period in a major coronary artery were continuously acquired from all patients. In order to achieve optimal angiographic and clinical results of PTCA, balloon was inflated for at least 60 sec. in each patient and it was deflated either due to the occurrence of chest pain, cardiac arrhythmia, hypotension, or after a maximum inflation time of 300 sec. After PTCA, 12-lead post-inflation ECG recordings were continuously acquired at least 180 sec. after balloon deflation in coronary artery at catheterization laboratory.
+A portable continuous 12-lead ECG device (microCOR, Infron Ltd), which amplifies, digitizes, processes and transmits data wirelessly to its software via a USB adapter in digital format, was used for data acquisition [3]. Recordings were digitized at a sampling rate of 8800 Hz with 24-bit sampling resolution and 0.1 µV amplitude resolution to produce high-resolution digital signals.
+Time instants related to balloon inflation and deflation during PTCA, occluded coronary artery in which PTCA is performed and patient's history of previous myocardial infarction were annotated by experienced cardiologists to facilitate the development and performance evaluation of various signal processing and artificial intelligence techniques that will utilize the GU-ECG database [4,5,6,7]. Only patients receiving elective PTCA in one of major coronary arteries were included in the database, whereas patients who had atrial fibrillation, ventricular tachycardia, paced rhythm, or myocardial infarction during data acquisition were excluded.
+12-lead pre-inflation, inflation, and post-inflation ECG recordings of each patient are included in experiment data files section with file extension *.ekg, which is data format of microCOR ECG device. Computer software which receives data from ECG device, displays, saves, and exports it to different file formats is included in experiment data files section with file extension *.exe, which is executable file format of microCOR PC software.
+Download All
+Files
+Institutions
+Gazi Universitesi
+Gazi Universitesi Tip Fakultesi
+Bilkent Universitesi
+Bilkent Universitesi Elektrik ve Elektronik Muhendisligi
+Categories
+Artificial Intelligence, Signal Processing, Data Mining, Machine Learning, Feature Selection, Cardiovascular Disease, Feature Extraction, Ischemic Heart Disease, Percutaneous Coronary Intervention, Coronary Artery Disease, Acute Coronary Syndrome, Electrocardiogram, Balloon Angioplasty, Coronary Angioplasty, Interventional Cardiology, Pattern Recognition, Biomedical Signal Processing, Coronary Reperfusion, Deep Learning, Clinical Cardiology
+Related Links
+Articlehttps://ieeexplore.ieee.org/document/8404733
+is cited by this dataset
+Articlehttps://ieeexplore.ieee.org/document/8806272
+is cited by this dataset
+Articlehttps://ieeexplore.ieee.org/document/8894953
+is cited by this dataset
+Articlehttps://wvvw.easychair.org/publications/preprint/cTHZ
+is cited by this dataset
+Articlehttps://ieeexplore.ieee.org/document/9302389
+is cited by this dataset
+Articlehttps://ieeexplore.ieee.org/abstract/document/9299275
+is cited by this dataset
+Articlehttps://ieeexplore.ieee.org/document/9299274
+is cited by this dataset
+Articlehttps://ieeexplore.ieee.org/abstract/document/9302485
+is cited by this dataset
+Softwarehttp://infron.com.tr/en/
+compiles this dataset
+Articlehttp://repository.bilkent.edu.tr/handle/11693/18336
+is related to this dataset
+Articlehttps://ieeexplore.ieee.org/document/7026388
+is related to this dataset
+LicenceCC BY 4.0Learn more
+Home
+|
+About
+|
+Accessibility Statement
+|
+Archive Policy
+|
+File Formats
+|
+API Docs
+|
+OAI
+|
+Mission
+|
+Status Updates
+Terms of Use
+|
+Privacy Policy
+|
+Cookie Settings
+All content on this site: Copyright © 2026 Elsevier inc, its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training and similar technologies. For all open access content, the Creative Commons licensing terms apply.

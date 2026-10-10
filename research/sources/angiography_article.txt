@@ -1,0 +1,440 @@
+A large-scale 12-lead electrocardiogram dataset for acute coronary syndrome prediction containing 19,955 ECGs | Scientific Data
+Skip to main content
+Thank you for visiting nature.com. You are using a browser version with limited support for CSS. To obtain
+the best experience, we recommend you use a more up to date browser (or turn off compatibility mode in
+Internet Explorer). In the meantime, to ensure continued support, we are displaying the site without styles
+and JavaScript.
+Advertisement
+View all journals
+Saved research
+Search
+Account
+Log in
+Content
+Explore content
+About the journal
+Publish with us
+Sign up for alerts
+RSS feed
+nature
+scientific data
+data descriptors
+article
+A large-scale 12-lead electrocardiogram dataset for acute coronary syndrome prediction containing 19,955 ECGs
+Download PDF
+Download PDF
+Data Descriptor
+Open access
+Published: 04 May 2026
+A large-scale 12-lead electrocardiogram dataset for acute coronary syndrome prediction containing 19,955 ECGs
+Xinyue Du
+ORCID: orcid.org/0000-0001-6060-84381 na1,
+Ying Liu2 na1,
+Lingli Wang1,
+Wenyi He1,
+Jiayue Yang2,
+Guangyu Bin2 &
+…
+Guolan Deng
+ORCID: orcid.org/0009-0001-9890-21031 Show authors
+Scientific Data
+volume 13, Article number: 1009 (2026) Cite this article
+Save article
+View saved research
+5051 Accesses
+Metrics details
+Abstract
+Acute coronary syndrome(ACS) is a common cardiovascular disease and a severe type of coronary heart disease. Electrocardiograms(ECGs) are the initial and indispensable examination for patients suspected of ACS in emergency treatment. Particularly in patients with occlusion myocardial infarction(OMI), prompt medical intervention is imperative. Although ECG-based artificial intelligence(AI) models have achieved high diagnostic accuracy in conditions such as atrial fibrillation and heart failure, their application to ACS prediction has been limited by the scarcity of large, openly available ECG datasets. In this study, we present a comprehensive 12-lead ECG dataset for ACS prediction, comprising 19,955 ten-second recordings sampled at 500 Hz from 18,909 patients—all of whom underwent digital subtraction angiography. The dataset includes labels for ST-elevation myocardial infarction, non–ST-elevation myocardial infarction, unstable angina, OMI, and infarction locations. Two physicians also assessed ACS and OMI identification, providing clinical diagnostic benchmarks. Furthermore, we developed and open-sourced a baseline deep learning model for OMI detection. This database and baseline model offer valuable resources for advancing AI research in ACS.
+Similar content being viewed by others
+A deep learning ECG model for identification and localization of occlusion myocardial infarction
+Article
+Open access
+13 May 2026
+AI-enhanced reconstruction of the 12-lead electrocardiogram via 3-leads with accurate clinical assessment
+Article
+Open access
+01 August 2024
+Machine learning for ECG diagnosis and risk stratification of occlusion myocardial infarction
+Article
+Open access
+29 June 2023
+Explore related subjects
+Discover the latest articles and news in related subjects.
+Acute coronary syndromes
+Data integration
+Electrodiagnosis
+Deep Learning Techniques for ECG Signal Analysis
+Background & Summary
+Acute coronary syndrome (ACS) is a group of clinical syndromes caused by acute myocardial ischemia. It is common in the elderly, men, postmenopausal women, smokers, patients with hypertension, diabetes, hyperlipidemia, abdominal obesity, and those with a family history of early-onset coronary heart disease. Patients with ACS are often with symptoms such as episodic chest pain and chest tightness, which can lead to arrhythmia, heart failure, and even sudden death. If these patients can be promptly identified and treated appropriately at the onset of the disease, their prognosis can be significantly improved1,2.
+Electrocardiograms (ECGs) are one of the most commonly used clinical examinations and a non-invasive diagnostic tool that can quickly assess heart-related diseases3,4,5,6,7. Patients with suspected ACS and chest pain should undergo ECG examination immediately at the first medical contact. According to the ECG manifestations, ACS is divided into acute ST-segment elevation myocardial infarction (STEMI) and non-ST-segment elevation acute coronary syndrome (NSTE-ACS). NSTE-ACS is further classified into non-ST-segment elevation myocardial infarction (NSTEMI) and unstable angina (UA) based on whether myocardial injury markers are elevated1,2. Among them, STEMI requires emergency reperfusion therapy8,9,10. However, whether the ST segment is elevated has limited accuracy in diagnosing acute coronary artery occlusion11,12,13,14. Recently, a new classification method has been proposed, namely, occlusive myocardial infarction (OMI) and non-OMI. Only those patients with OMI may benefit from emergency reperfusion therapy15,16,17. The potential of deep learning in intelligent ECG diagnosis provides a possible solution to this classification problem18,19,20,21,22. However, no open-access OMI model with public weights currently exists.
+Salah et al.22 utilized a dataset (n = 7313) and applied a random forest (RF) model to analyze 12-lead ECG features from chest pain patients for the detection of OMI. In the external test set, the model achieved an area under the curve (AUC) of 0.87, a sensitivity of 0.86, and a specificity of 0.98. Additionally, risk stratification for OMI was performed using the AI model, categorizing 74.4% of patients as low risk (with a sensitivity of 0.91 and a negative predictive value of 0.99) and 4.6% as high risk (with a specificity of 0.98 and a positive predictive value of 0.51). The study made the ECG features used in the derivation and external validation datasets publicly available. These features include amplitude, duration, area, slope, and concavity of global and lead-specific waveforms, as well as other ECG metrics. However, publicly available ECG datasets lack granular diagnostic details or patient histories. Kim et al.23 developed a convolutional neural networks (CNN)-based binary classifier using a private dataset (n = 80) to early detect STEMI in the emergency department. The model had an AUC of 0.88, a sensitivity of 0.98 and a specificity of 0.77. However, no studies have made their ECG datasets publicly available. The research progress is hindered by the lack of a large-scale open-access ECG dataset for ACS prediction.
+This study provides a large-scale electrocardiogram (ECG) dataset for acute coronary syndrome (ACS) prediction, sourced from the First Affiliated Hospital of Chongqing Medical University, collected between December 2015 and May 2024. The dataset comprises preoperative 12-lead ECGs from patients undergoing coronary angiography. It includes 19,955 ECG recordings from 18,909 patients aged 19 to 99 years. Each recording is 10 seconds long, sampled at 500 Hz, and accompanied by patient age and gender information. The labels of ECG data are annotated based on angiographic findings and clinical diagnoses.
+Methods
+Data acquisition
+This study has been approved by the ethics committee of the First Affiliated Hospital of Chongqing Medical University (approval number: 2024-256-01). As this study is retrospective, written informed consent was waived. All patient identifiers were removed from the ECG data and clinical metadata to protect patient privacy.
+From December 2015 to May 2024, all the coronary angiography operation records and clinical information of patients who underwent coronary angiography in the Department of Cardiology of the First Affiliated Hospital of Chongqing Medical University were extracted from the hospital’s medical record system.
+All the original ECG recordings of the patients were extracted from the ECG diagnostic system. The ECG signal data consisted of 10-s 12-lead ECG signals (leads I, II, III, aVL, aVR, aVF, V1–V6) with a sampling rate of 500 Hz. Initially, 97,976 raw ECG recordings and 35,078 digital subtraction angiography (DSA) records were obtained (Fig. 1).
+Fig. 1
+Full size image
+Flow chart of data matching, exclusion, and division. DSA: digital subtraction angiography; ECG: electrocardiogram; STEMI: ST-segment elevation myocardial infarction; CTO: chronic total occlusion; AMI: acute myocardial inarction. NAMI: non-AMI.
+All ECGs were acquired using the same electrocardiograph (Mecg-300, Medex Inc.) with a paper speed of 25 mm/s, sensitivity of 10 mm/mV, and a sampling frequency of 500 Hz. The standard 12-lead ECG configuration comprises three limb leads (I, II, III), three augmented unipolar limb leads (aVR, aVL, aVF), and six precordial leads (V1-V6). A standardized protocol was employed to record 12-lead ECGs for all patients. The patient was positioned supine on the examination table, with all muscles relaxed, maintaining steady and quiet breathing, and refraining from speaking or moving. The skin of the anterior chest, as well as both wrists and ankles, should be exposed. Typically, 75% alcohol was used to cleanse the skin at the sites where the ECG electrodes or suction cups were to be placed, ensuring optimal skin-electrode contact and conductivity. The patient was instructed to breathe calmly during the ECG examination. The standard duration for ECG acquisition was 10 seconds. The placement of electrodes or suction cups was as follows: above the wrist joints on both arms, above the medial malleoli on both legs, and precordial lead positions as detailed in Table 1.
+Table 1 The standard positions of suction cups of chest ECG leads.
+Full size table
+Data processing
+Definition
+STEMI, NSTEMI, and UA all belong to the category of ACS, a classification based on electrocardiogram (ECG) findings and cardiac biomarker levels. Based on their coronary angiography findings, they can be further categorized as OMI and non-OMI. CTO, on the other hand, describes a state of chronic occlusive disease in the coronary arteries. The specific definitions of these terms are as follows.
+STEMI: An acute myocardial infarction characterized by persistent ST-segment elevation on the ECG1,2.
+NSTEMI: An acute myocardial infarction with evidence of myocardial necrosis (elevated cardiac troponin values) but no persistent ST-segment elevation on ECG1,2.
+UA: A clinical syndrome of myocardial ischemia without myocardial necrosis (cardiac troponin values not elevated), representing a high-risk precursor to acute myocardial infarction1,2.
+OMI: An acute coronary occlusion with TIMI flow grade 0 or 1 in the culprit vessel prior to percutaneous coronary intervention (PCI)16.
+CTO: A chronic (≥3 months), complete occlusion (TIMI flow grade 0 or 1) of a coronary artery, which is often associated with the formation of well-developed collateral circulation24.
+Data matching
+The electrocardiogram data and coronary angiography data were matched through the patients’ identity information, and a total of 21,007 matched records were obtained (Fig. 1).
+Data exclusion
+Only pre-angiography ECGs were retained. Patients should have an ECG examination within 7 days prior to the DSA (The exact time interval between each case’s electrocardiogram recording and coronary angiography was recorded in a metadata column named “Time_Interval” with the unit specified in minutes). For patients with multiple ECGs within the inclusion window, we had included all available ECGs to better capture the temporal dynamics of ECG changes prior to angiography, and there were 106 cases that did not meet this criterion and were thus excluded (Fig. 1). The following are other criteria for exclusion (Fig. 1). There were 746 cases where the AI algorithm failed to analyze the data. Records with missing discharge diagnosis or surgical records were excluded (n = 56). Records with discharge diagnosis or surgical records containing “ventricular fibrillation/ventricular tachycardia/pacing” were 983. Records with previous stent information in discharge diagnosis or surgical records were 1508. All these records were retained regardless of rhythm abnormalities or prior cardiac history. Corresponding metadata flags (VF_VT, Paced, Prior_PCI) were added to identify these cases. Obviously abnormal and unreasonable data were excluded, including the following scenarios: CTO records with STEMI but without clear AMI were excluded (n = 41). Non-AMI (NAMI) records with STEMI but without clear AMI were excluded (n = 103). After the aforementioned exclusion and data cleaning process, the final dataset consisted of 19,955 records (Fig. 1).
+Label processing
+Patients with “acute myocardial infarction” or “acute MI” in the discharge diagnosis were labeled as AMI (AMI column value = 1). The OMI label (OMI column value = 1) was assigned based on the angiographic report indicating an acute occlusion. OMI was strictly defined as an acute coronary occlusion with TIMI flow grade 0 or 1 in the culprit vessel prior to PCI. CTO was labeled separately (CTO column value = 1) and was defined as a chronic (≥3 months) and complete occlusion (TIMI flow grade 0 or 1) associated with well-developed collateral circulation. Finally, NSTEMI, STEMI, and UA were labeled (with respective column values = 1) based on the discharge diagnosis.
+ECG signal data
+To facilitate data usage, we provide the waveform data in WFDB format. In this format, each ECG record is represented by a pair of files: a.dat file containing the binary raw data, and a corresponding.hea file with the same prefix that includes the header information. Additionally, we employed a commercial software (MedEx, Co., Ltd., Beijing, China) to extract the median waveform data for each sample, which is stored in the database in.med format Fig. 2.
+Fig. 2
+Full size image
+The directory structure for data storage.
+Data Records
+The dataset is available at Figshare (https://doi.org/10.6084/m9.figshare.29925314)25. The data presented in this study consist of three components: raw ECG recordings, ECG median data and diagnostic documentation. The directory structure for data storage is shown Fig. 3.
+Fig. 3
+Full size image
+Distribution of occluded vessels in OMI. LM: left Main, the origin of the left coronary artery; PLAD: proximal LAD, proximal segment of the left anterior descending artery. MLAD: mid LAD, middle segment of the left anterior descending artery. DLAD: distal LAD, distal segment of the left anterior descending artery. DB: diagonal branch, a branch of the left anterior descending artery. PLCX: proximal LCX, proximal segment of the left circumflex artery. MLCX: mid LCX, middle segment of the left circumflex artery. DLCX: distal LCX, distal segment of the left circumflex artery. OM: obtuse marginal branch, a branch of the left circumflex artery. PRCA: proximal RCA, proximal segment of the right coronary artery. MRCA: mid RCA, middle segment of the right coronary artery. DRCA: distal RCA, distal segment of the right coronary artery.
+The patient’s basic information, ECG-related records, diagnosis and treatment details, as well as detailed information on each segment of the coronary artery are stored in the CSV file format. The columns in the files are shown in Table 2.
+Table 2 Diagnostic documentation columns.
+Full size table
+Data overview
+This dataset can be used for classification task. To facilitate model training and testing, the dataset was randomly divided into a training set and a test set (Fig. 1). Specifically, 90% of the data was allocated to the training set for model training and parameter optimization, while the remaining 10% was designated as the test set to evaluate AI model performance. A t-test was performed to assess the differences in characteristics between the two sets, revealing no significant differences in age, gender, or other characteristics (all p > 0.05). In order to better simulate real-world application scenarios and evaluate the model’s generalization capability, disease labels were hidden in the test set. Consequently, we developed an online evaluation platform (http://39.105.59.221:8080/) to enable automated, standardized assessment. Researchers can directly upload their binary predictions, in a CSV format that is aligned with the test set identifiers, to the system. The server then performs a blind comparison against the hidden ground-truth labels to compute key performance metrics, including Sensitivity, Specificity, PPV, NPV, Accuracy, and F1-score.
+Table 3 shows the patient characteristics. The average age of the patients from whom the ECG records were obtained was 65 years (standard deviation: 11), with 40.81% of the patients being female. Among the ECG records, 8984 were diagnosed with ACS, accounting for 49.20% of the total ECG records. Among them, there were 1513 cases of STEMI (8.29%), 1274 cases of NSTEMI (6.89%), and 6197 cases of UA (33.94%). Figure 3 shows the distribution of occluded vessels in OMI.
+Table 3 Patient characteristics of the database.
+Full size table
+Technical Validation
+Data cleaning and screening validation
+After data matching, a total of 21,007 cases were obtained. Following the seven-step cleaning process outlined in Fig. 1, 19,995 records were retained, representing 94.99% of the original dataset. This demonstrates that the screening protocol effectively excluded low-quality or non-compliant samples while retaining high-quality records that align with the research objectives.
+Label consistency validation
+The preliminary diagnostic labels for each ECG recording were extracted from coronary angiography results and discharge diagnoses. A senior ECG expert was invited to review each label individually. Leveraging extensive clinical expertise, the expert evaluated the waveform characteristics and clinical diagnoses of each ECG recording to ensure that the labels were highly consistent with the patients’ clinical conditions and ECG features. A double-blind approach was adopted during the review process to minimize subjective bias, wherein the expert was unaware of the original label sources.
+During the review, the expert meticulously compared the diagnostic labels of each ECG recording. After several rounds of verification and refinement, the final labels achieved 100% concordance with the expert’s independent judgment. The review results demonstrated that the labels derived from the coronary angiography diagnoses accurately reflected the patients’ clinical conditions, thereby providing a reliable foundation for subsequent research and model training.
+Signal duration validation
+The duration of the 12-lead signals in all retained records was analyzed. According to the data acquisition standards, each ECG recording should have a signal duration of 10 s. A distribution histogram of signal durations revealed that 99.99% of the signals adhered to the 10-s standard, with no instances of missing segments. This confirms the stability of the data acquisition process and the integrity of the recorded signals.
+Sampling rate validation
+The sampling rate of each recording was further analyzed. According to the data acquisition standards, the sampling rate should be 500 Hz. All recordings adhered to the 500 Hz standard, indicating that the data acquisition equipment operated normally and the signal quality was reliable.
+Signal amplitude validation
+Most leads displayed normal signal intensities, with amplitudes ranging between −0.54 and 1.03 mV. Nonetheless, V2 and V3 display particularly wide amplitude ranges, from −1.72 to 1.18 mV and −1.49 to 1.50 mV respectively, along with higher standard deviations of 0.33 mV, likely due to the patient’s physiological state or signal acquisition conditions.
+Baseline drift validation
+Most leads exhibited minimal baseline drift, primarily within the range of −0.07 to 0.09 mV with standard deviations of 0.03 mV, suggesting stable ECG baselines. Potential causes of baseline drift include instrumental drift, patient respiration, or poor electrode contact.
+The varying quality levels reflect the diversity of ECG data in real-world data centers, which can be regarded as an advantage of this dataset. This dataset encompasses the authentic distribution of data quality observed in clinical practice, thereby serving as a valuable resource for evaluating the performance of machine learning or deep learning algorithms. It enables the assessment of algorithmic robustness in response to environmental condition variations or diverse imperfections in input data.
+Representative 12-lead ECG data from patients with various diseases, randomly selected from the dataset, are presented in Figs. 4–8, where the raw ECG tracings with annotated baseline drifts are shown.
+Fig. 4
+Full size image
+A representative 12-lead ECG recording of a patient: male, 57 years old, STEMI, OMI, complete occlusion of the PLAD, patient ID: P10819.
+Fig. 5
+Full size image
+A representative 12-lead ECG recording of a patient: female, 75 years old, STEMI, NOMI, patient ID: P03858.
+Fig. 6
+Full size image
+A representative 12-lead ECG recording of a patient: Male, 56 years old, NSTEMI, OMI, complete occlusion of the PLAD vessel, patient ID: P03202.
+Fig. 7
+Full size image
+A representative 12-lead ECG recording of a patient: male, 81 years old, NSTEMI, NOMI, patient ID: P01762.
+Fig. 8
+Full size image
+A representative 12-lead ECG recording of a patient: female, 78 years old, UA, patient ID: P13148.
+Feasibility validation of the baseline Model
+A multilayer CNN model was employed for the binary classification of OMI. The input data for the baseline model utilized the median waveform of the 12-lead ECG, which is also available in the database. The parameters of the model were configured as outlined in Table 4, and the model architecture is depicted in Fig. 9.
+Table 4 The baseline model’s parameters.
+Full size table
+Fig. 9
+Full size image
+The CNN model architecture.
+The model underwent 5-fold cross-validations on the training set and was subsequently evaluated on the test set using the same hyperparameters, as shown in Fig. 10.
+Fig. 10
+Full size image
+The CNN model performance. (Left) the resulting ROC curves of 5-fold cross-validations on the training set. (Right) the model’s performance on the test set using the same hyperparameters as the 5-fold cross-validations. Different colored “×” symbols represent the diagnostic results from different ECG experts.
+On the test set, the model achieved a sensitivity of 0.697, a specificity of 0.873, a PPV of 0.277, an NPV of 0.976, an accuracy of 0.861, and an F1-score of 0.396.
+To further assess the model’s performance, two independent ECG experts were invited to diagnose OMI based on the test set ECG recordings. During the diagnostic process, the experts relied solely on the waveform characteristics of the 12-lead ECGs, without access to any patient-related clinical information, ensuring objectivity and independence in their assessments. The two ECG experts had the following diagnostic performance: The first expert had a sensitivity of 0.277, a specificity of 0.972, a PPV of 0.407, an NPV of 0.951, an accuracy of 0.927, and an F1-score of 0.330. The second expert had a sensitivity of 0.429, a specificity of 0.941, a PPV of 0.338, an NPV of 0.959, an accuracy of 0.908, and an F1-score of 0.378.
+The model was additionally evaluated via decision curve analysis (DCA) to quantify its net benefit across different threshold probabilities, as shown in Fig. 11.
+Fig. 11
+Full size image
+DCA for the prediction model. The plot illustrates the net benefit of using the model (red line) compared to the default strategies of treating all patients (solid black line) and treating no patients (dotted black line). The red shaded area highlights the additional net benefit provided by the model.
+The analysis indicates that the prediction model provides a superior net benefit compared to the alternative strategies. The maximum net benefit achieved was 0.0567, corresponding to an optimal threshold probability of 0.010. Based on this threshold, the clinical strategy suggests recommending treatment when the predicted probability is greater than 1.0%. The decision curve shows that using the model to guide clinical decisions adds more net benefit than either the “treat all” or “treat none” strategies within the threshold probability range of 0.010 to 0.120.
+The feasibility validation of the baseline model confirmed that the dataset was suitable for AI model training and evaluation. The selected model effectively learned discriminative features from the data and demonstrated predictive capability.
+Limitation
+A limitation of our study is that adjudicated diagnoses of occlusion myocardial infarction were not available in the dataset. Therefore, we could not apply a broader definition of OMI that would include cases with TIMI flow grade 2 or 3 accompanied by a high peak troponin level or an adjudicated OMI diagnosis, which would account for cases of spontaneous reperfusion prior to angiography.
+Data availability
+The ECG dataset in this paper will be made publicly available at https://doi.org/10.6084/m9.figshare.2992531425.
+Code availability
+The code used for dataset preparation can be obtained at https://github.com/catcatgirl/validation-code.git.
+References
+Byrne, R. A. et al. 2023 ESC Guidelines for the management of acute coronary syndromes. European heart journal 44, 3720–3826, https://doi.org/10.1093/eurheartj/ehad191 (2023).
+Article
+CAS
+PubMed
+Google Scholar
+Rao, S. V. et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. Journal of the American College of Cardiology 85, 2135–2237, https://doi.org/10.1016/j.jacc.2024.11.009 (2025).
+Article
+PubMed
+Google Scholar
+Yagi, R., Mori, Y., Goto, S., Iwami, T. & Inoue, K. Routine Electrocardiogram Screening and Cardiovascular Disease Events in Adults. JAMA internal medicine 184, 1035–1044, https://doi.org/10.1001/jamainternmed.2024.2270 (2024).
+Article
+CAS
+PubMed
+PubMed Central
+Google Scholar
+Birnbaum, Y., Rankinen, J., Jneid, H., Atar, D. & Nikus, K. The Role of ECG in the Diagnosis and Risk Stratification of Acute Coronary Syndromes: an Old but Indispensable Tool. Current cardiology reports 24, 109–118, https://doi.org/10.1007/s11886-021-01628-7 (2022).
+Article
+PubMed
+Google Scholar
+Miranda, D. F., Lobo, A. S., Walsh, B., Sandoval, Y. & Smith, S. W. New Insights Into the Use of the 12-Lead Electrocardiogram for Diagnosing Acute Myocardial Infarction in the Emergency Department. The Canadian journal of cardiology 34, 132–145, https://doi.org/10.1016/j.cjca.2017.11.011 (2018).
+Article
+PubMed
+Google Scholar
+Cook, D. A., Oh, S. Y. & Pusic, M. V. Accuracy of Physicians’ Electrocardiogram Interpretations: A Systematic Review and Meta-analysis. JAMA internal medicine 180, 1461–1471, https://doi.org/10.1001/jamainternmed.2020.3989 (2020).
+Article
+PubMed
+PubMed Central
+Google Scholar
+Amsterdam, E. A. et al. Testing of low-risk patients presenting to the emergency department with chest pain: a scientific statement from the American Heart Association. Circulation 122, 1756–1776, https://doi.org/10.1161/CIR.0b013e3181ec61df (2010).
+Article
+PubMed
+PubMed Central
+Google Scholar
+Vogel, B. et al. ST-segment elevation myocardial infarction. Nature reviews. Disease primers 5, 39, https://doi.org/10.1038/s41572-019-0090-3 (2019).
+Article
+MathSciNet
+PubMed
+Google Scholar
+Kofoed, K. F. et al. Early Versus Standard Care Invasive Examination and Treatment of Patients With Non-ST-Segment Elevation Acute Coronary Syndrome. Circulation 138, 2741–2750, https://doi.org/10.1161/circulationaha.118.037152 (2018).
+Article
+PubMed
+Google Scholar
+Butt, J. H. et al. Importance of Risk Assessment in Timing of Invasive Coronary Evaluation and Treatment of Patients With Non-ST-Segment-Elevation Acute Coronary Syndrome: Insights From the VERDICT Trial. Journal of the American Heart Association 10, e022333, https://doi.org/10.1161/jaha.121.022333 (2021).
+Article
+PubMed
+PubMed Central
+Google Scholar
+Macias, M., Peachey, J., Mattu, A. & Brady, W. J. The electrocardiogram in the ACS patient: high-risk electrocardiographic presentations lacking anatomically oriented ST-segment elevation. The American journal of emergency medicine 34, 611–617, https://doi.org/10.1016/j.ajem.2015.11.047 (2016).
+Article
+PubMed
+Google Scholar
+de Alencar Neto, J. N. et al. Systematic review and meta-analysis of diagnostic test accuracy of ST-segment elevation for acute coronary occlusion. International journal of cardiology 402, 131889, https://doi.org/10.1016/j.ijcard.2024.131889 (2024).
+Article
+PubMed
+Google Scholar
+Spirito, A. et al. Acute Coronary Occlusion in Patients With Non-ST-Segment Elevation Out-of-Hospital Cardiac Arrest. Journal of the American College of Cardiology 81, 446–456, https://doi.org/10.1016/j.jacc.2022.10.039 (2023).
+Article
+PubMed
+Google Scholar
+Belyavskaya, J. & deSouza, I. S. Not All Electrocardiographic ST-Elevations Are Acute Coronary Occlusions. JAMA internal medicine 182, 74–75, https://doi.org/10.1001/jamainternmed.2021.6887 (2022).
+Article
+PubMed
+Google Scholar
+Kola, M., Shuka, N., Meyers, H. P., Zaimi Petrela, E. & Smith, S. W. OMI/NOMI: Time for a New Classification of Acute Myocardial Infarction. Journal of clinical medicine 13, https://doi.org/10.3390/jcm13175201 (2024).
+Meyers, H. P. et al. Comparison of the ST-Elevation Myocardial Infarction (STEMI) vs. NSTEMI and Occlusion MI (OMI) vs. NOMI Paradigms of Acute MI. The Journal of emergency medicine 60, 273–284, https://doi.org/10.1016/j.jemermed.2020.10.026 (2021).
+Article
+PubMed
+Google Scholar
+McLaren, J. T. T., Meyers, H. P., Smith, S. W. & Chartier, L. B. From STEMI to occlusion MI: paradigm shift and ED quality improvement. Cjem 24, 250–255, https://doi.org/10.1007/s43678-021-00255-z (2022).
+Article
+PubMed
+Google Scholar
+Baker, P. O. et al. Artificial Intelligence Driven Prehospital ECG Interpretation for the Reduction of False Positive Emergent Cardiac Catheterization Lab Activations: A Retrospective Cohort Study. Prehospital emergency care 29, 218–226, https://doi.org/10.1080/10903127.2024.2399218 (2025).
+Article
+PubMed
+Google Scholar
+Herman, R. et al. International evaluation of an artificial intelligence-powered electrocardiogram model detecting acute coronary occlusion myocardial infarction. European heart journal. Digital health 5, 123–133, https://doi.org/10.1093/ehjdh/ztad074 (2024).
+Article
+PubMed
+Google Scholar
+Siontis, K. C., Noseworthy, P. A., Attia, Z. I. & Friedman, P. A. Artificial intelligence-enhanced electrocardiography in cardiovascular disease management. Nature reviews. Cardiology 18, 465–478, https://doi.org/10.1038/s41569-020-00503-2 (2021).
+Article
+PubMed
+PubMed Central
+Google Scholar
+Lin, C. S. et al. AI-enabled electrocardiography alert intervention and all-cause mortality: a pragmatic randomized clinical trial.
+Al-Zaiti, S. S. et al. Machine learning for ECG diagnosis and risk stratification of occlusion myocardial infarction. Nature medicine 29, 1804–1813, https://doi.org/10.1038/s41591-023-02396-3 (2023).
+Article
+CAS
+PubMed
+PubMed Central
+Google Scholar
+Kim, D. et al. A Retrospective Clinical Evaluation of an Artificial Intelligence Screening Method for Early Detection of STEMI in the Emergency Department. Journal of Korean medical science 37, e81, https://doi.org/10.3346/jkms.2022.37.e81 (2022).
+Article
+PubMed
+PubMed Central
+Google Scholar
+Ybarra, L. F. et al. Definitions and clinical trial design principles for coronary artery chronic total occlusion therapies: CTO-ARC consensus recommendations. Circulation 143, 479–500 (2021).
+Article
+PubMed
+Google Scholar
+Du, X.-Y. et al. A large-scale 12-lead electrocardiogram dataset for acute coronary syndrome prediction containing 19,955 ECGs. Figshare https://doi.org/10.6084/m9.figshare.29925314 (2026).
+Download references
+Acknowledgements
+This work was sponsored by Natural Science Foundation of Chongqing, China (CSTB2024NSCQ-MSX1071).
+Author information
+Author notes
+These authors contributed equally: Xinyue Du, Ying Liu.
+Authors and Affiliations
+Department of Cardiovascular Medicine, Cardiovascular Research Center, The First Affiliated Hospital of Chongqing Medical University, Chongqing, China
+Xinyue Du, Lingli Wang, Wenyi He & Guolan Deng
+Department of Biomedical Engineering, College of Chemistry and Life Science, Beijing University of Technology, Beijing, 100124, China
+Ying Liu, Jiayue Yang & Guangyu Bin
+Authors
+Xinyue Du
+View author publications
+Search author on:PubMed Google Scholar
+Ying Liu
+View author publications
+Search author on:PubMed Google Scholar
+Lingli Wang
+View author publications
+Search author on:PubMed Google Scholar
+Wenyi He
+View author publications
+Search author on:PubMed Google Scholar
+Jiayue Yang
+View author publications
+Search author on:PubMed Google Scholar
+Guangyu Bin
+View author publications
+Search author on:PubMed Google Scholar
+Guolan Deng
+View author publications
+Search author on:PubMed Google Scholar
+Contributions
+Xinyue Du contributed to the design of the study and the drafting of the manuscript. Wenyi He and Lingli Wang were responsible for data collection and analysis.Ying Liu handled data cleaning, preprocessing, and technical validation. Jiayue Yang was primarily responsible for the re-organization of the dataset, revised the manuscript, and developed the online evaluation platform. Guangyu Bin oversaw data processing and provided expert guidance. Guolan Deng provided comments on the study design, data analysis, and research supervision. All authors reviewed the manuscript and approved the submitted version.
+Corresponding authors
+Correspondence to
+Guangyu Bin or Guolan Deng.
+Ethics declarations
+Competing interests
+The authors declare no competing interests.
+Additional information
+Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+Rights and permissions
+Open Access This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modified the licensed material. You do not have permission under this licence to share adapted material derived from this article or parts of it. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+Reprints and permissions
+About this article
+Cite this article
+Du, X., Liu, Y., Wang, L. et al. A large-scale 12-lead electrocardiogram dataset for acute coronary syndrome prediction containing 19,955 ECGs.
+Sci Data 13, 1009 (2026). https://doi.org/10.1038/s41597-026-07278-0
+Download citation
+Received: 04 September 2025
+Accepted: 14 April 2026
+Published: 04 May 2026
+Version of record: 09 July 2026
+DOI: https://doi.org/10.1038/s41597-026-07278-0
+Share this article
+Anyone you share the following link with will be able to read this content:Get shareable link
+Sorry, a shareable link is not currently available for this article.
+Copy shareable link to clipboard
+Provided by the Springer Nature SharedIt content-sharing initiative
+Download PDF
+Associated content
+Collection
+Clinical informatics
+Advertisement
+Explore content
+Research articles
+News & Comment
+Collections
+Follow us on X
+Sign up for alerts
+RSS feed
+About the journal
+Aims and scope
+Journal Metrics
+Editors
+Policies
+Open Access Fees and Funding
+Calls for Papers
+Contact
+Publish with us
+Submission Guidelines
+Language editing services
+Open access funding
+Submit manuscript
+Search
+Search articles by subject, keyword or author
+Show results from
+All journals
+This journal
+Search
+Advanced search
+Quick links
+Explore articles by subject
+Find a job
+Guide to authors
+Editorial policies
+Scientific Data
+(Sci Data)
+ISSN 2052-4463 (online)
+nature.com footer links
+About Nature Portfolio
+About us
+Press releases
+Press office
+Contact us
+Discover content
+Journals A-Z
+Articles by subject
+protocols.io
+Nature Index
+Nature Books
+Publishing policies
+Nature portfolio policies
+Open access
+Author & Researcher services
+Reprints & permissions
+Research data
+Language editing
+Scientific editing
+Nature Masterclasses
+Research Solutions
+Libraries & institutions
+Librarian service & tools
+Librarian portal
+Open research
+Recommend to library
+Advertising & partnerships
+Advertising
+Partnerships & Services
+Media kits
+Branded
+content
+Professional development
+Nature Awards
+Nature Careers
+Nature
+Conferences
+Regional websites
+Nature Africa
+Nature China
+Nature India
+Nature Japan
+Nature Middle East
+Privacy
+Policy
+Use
+of cookies
+Your privacy choices/Manage cookies
+Legal
+notice
+Accessibility
+statement
+Terms & Conditions
+Your US state privacy rights
+© 2026 Springer Nature Limited
+Close banner
+Close
+Sign up for the Nature Briefing newsletter — what matters in science, free to your inbox daily.
+Email address
+Sign up
+I agree my information will be processed in accordance with the Nature and Springer Nature Limited Privacy Policy.
+Close banner
+Close
+Get the most important science stories of the day, free in your inbox.
+Sign up for Nature Briefing

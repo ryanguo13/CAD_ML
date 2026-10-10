@@ -1,0 +1,136 @@
+[2211.14730] A Time Series is Worth 64 Words: Long-term Forecasting with Transformers
+Skip to main content
+Search
+Submit
+Donate
+Log in
+Search arXiv
+Press Enter to search · Advanced search
+Computer Science > Machine Learning
+arXiv:2211.14730 (cs)
+[Submitted on 27 Nov 2022 (v1), last revised 5 Mar 2023 (this version, v2)]
+Title:A Time Series is Worth 64 Words: Long-term Forecasting with Transformers
+Authors:Yuqi Nie, Nam H. Nguyen, Phanwadee Sinthong, Jayant Kalagnanam
+View a PDF of the paper titled A Time Series is Worth 64 Words: Long-term Forecasting with Transformers, by Yuqi Nie and 3 other authors
+View PDF
+HTML (experimental)
+Abstract:We propose an efficient design of Transformer-based models for multivariate time series forecasting and self-supervised representation learning. It is based on two key components: (i) segmentation of time series into subseries-level patches which are served as input tokens to Transformer; (ii) channel-independence where each channel contains a single univariate time series that shares the same embedding and Transformer weights across all the series. Patching design naturally has three-fold benefit: local semantic information is retained in the embedding; computation and memory usage of the attention maps are quadratically reduced given the same look-back window; and the model can attend longer history. Our channel-independent patch time series Transformer (PatchTST) can improve the long-term forecasting accuracy significantly when compared with that of SOTA Transformer-based models. We also apply our model to self-supervised pre-training tasks and attain excellent fine-tuning performance, which outperforms supervised training on large datasets. Transferring of masked pre-trained representation on one dataset to others also produces SOTA forecasting accuracy. Code is available at: this https URL.
+Comments:
+Accepted by ICLR 2023
+Subjects:
+Machine Learning (cs.LG); Artificial Intelligence (cs.AI)
+Cite as:
+arXiv:2211.14730 [cs.LG]
+(or
+arXiv:2211.14730v2 [cs.LG] for this version)
+https://doi.org/10.48550/arXiv.2211.14730
+Focus to learn more
+arXiv-issued DOI via DataCite
+Submission history From: Yuqi Nie [view email]
+[v1]
+Sun, 27 Nov 2022 05:15:42 UTC (6,468 KB)
+[v2]
+Sun, 5 Mar 2023 22:11:56 UTC (6,463 KB)
+Full-text links:
+Access Paper:
+View a PDF of the paper titled A Time Series is Worth 64 Words: Long-term Forecasting with Transformers, by Yuqi Nie and 3 other authors
+View PDF
+HTML (experimental)
+TeX Source
+view license
+Current browse context:
+cs.LG
+< prev
+|
+next >
+new
+|
+recent
+| 2022-11
+Change to browse by:
+cs
+cs.AI
+References & Citations
+NASA ADS
+Google Scholar
+Semantic Scholar
+1 blog link (what is this?)
+export BibTeX citation
+Loading...
+BibTeX formatted citation
+×
+loading...
+Data provided by:
+Bookmark
+Bibliographic Tools
+Bibliographic and Citation Tools
+Bibliographic Explorer Toggle
+Bibliographic Explorer (What is the Explorer?)
+Connected Papers Toggle
+Connected Papers (What is Connected Papers?)
+Litmaps Toggle
+Litmaps (What is Litmaps?)
+scite.ai Toggle
+scite Smart Citations (What are Smart Citations?)
+Code, Data, Media
+Code, Data and Media Associated with this Article
+alphaXiv Toggle
+alphaXiv (What is alphaXiv?)
+Links to Code Toggle
+CatalyzeX Code Finder for Papers (What is CatalyzeX?)
+DagsHub Toggle
+DagsHub (What is DagsHub?)
+GotitPub Toggle
+Gotit.pub (What is GotitPub?)
+Huggingface Toggle
+Hugging Face (What is Huggingface?)
+ScienceCast Toggle
+ScienceCast (What is ScienceCast?)
+Demos
+Demos
+Replicate Toggle
+Replicate (What is Replicate?)
+Spaces Toggle
+Hugging Face Spaces (What is Spaces?)
+Spaces Toggle
+TXYZ.AI (What is TXYZ.AI?)
+Related Papers
+Recommenders and Search Tools
+Link to Influence Flower
+Influence Flower (What are Influence Flowers?)
+Core recommender toggle
+CORE Recommender (What is CORE?)
+IArxiv recommender toggle
+IArxiv Recommender
+(What is IArxiv?)
+Author
+Venue
+Institution
+Topic
+About arXivLabs
+arXivLabs: experimental projects with community collaborators
+arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.
+Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them.
+Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs.
+Which authors of this paper are endorsers? |
+Disable MathJax (What is MathJax?)
+We gratefully acknowledge support from
+our major funders,
+member institutions, ,
+and all contributors.
+About
+·
+Help
+·
+Contact
+·
+Subscribe
+·
+Copyright
+·
+Privacy
+·
+Accessibility
+·
+Operational Status (opens in new tab)
+Major funding support from

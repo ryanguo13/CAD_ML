@@ -1,0 +1,46 @@
+EchoNet Dynamic
+Skip to content
+EchoNet-Dynamic
+A Large New Cardiac Motion Video Data Resource for Medical Machine Learning
+Menu
+Home
+Introduction
+Motivation
+Dataset
+Code
+Accessing Dataset
+Paper
+Introduction
+Echocardiography, or cardiac ultrasound, is the most widely used and readily available imaging modality to assess cardiac function and structure. Combining portable instrumentation, rapid image acquisition, high temporal resolution, and without the risks of ionizing radiation, echocardiography is one of the most frequently utilized imaging studies in the United States and serves as the backbone of cardiovascular imaging. For diseases ranging from heart failure to valvular heart diseases, echocardiography is both necessary and sufﬁcient to diagnose many cardiovascular diseases. In addition to our deep learning model, we introduce a new large video dataset of echocardiograms for computer vision research. The EchoNet-Dynamic database includes 10,030 labeled echocardiogram videos and human expert annotations (measurements, tracings, and calculations) to provide a baseline to study cardiac motion and chamber sizes.
+Motivation
+Machine learning analysis of biomedical images has seen significant recent advances. In contrast, there has been much less work on medical videos, despite the fact that videos are routinely used in many clinical settings. A major bottleneck for this is the the lack of openly available and well annotated medical video data. Computer vision has benefited greatly from open databases which allow for collaboration, comparison, and creation of task specific architectures. We present the EchoNet-Dynamic dataset of 10,030 echocardiography videos, spanning the range of typical echocardiography lab imaging acquisition conditions, with corresponding labeled measurements including ejection fraction, left ventricular volume at end-systole and end-diastole, and human expert tracings of the left ventricle as an aid for studying machine learning approaches to evaluate cardiac function. We additionally present the performance of our model with 3-dimensional convolutional neural network architecture for video classification.
+This model is used semantically segment the left ventricle and to assess ejection fraction to expert human performance and as a benchmark for further collaboration, comparison, and creation of task-specific architectures. To the best of our knowledge, this is the largest labeled medical video dataset made available publicly to researchers and medical professionals and first public report of video-based 3D convolutional architectures to assess cardiac function.
+Dataset
+Echocardiogram Videos: A standard full resting echocardiogram study consists of a series of videos and images visualizing the heart from different angles, positions, and image acquisition techniques. The dataset contains 10,030 apical-4-chamber echocardiography videos from individuals who underwent imaging between 2016 and 2018 as part of routine clinical care at Stanford University Hospital. Each video was cropped and masked to remove text and information outside of the scanning sector. The resulting images were then downsampled by cubic interpolation into standardized 112x112 pixel videos.
+Measurements: In addition to the video itself, each study is linked to clinical measurements and calculations obtained by a registered sonographer and veriﬁed by a level 3 echocardiographer in the standard clinical workﬂow. A central metric of cardiac function is the left ventricular ejection fraction, which is used to diagnose cardiomyopathy, assess eligibility for certain chemotherapies, and determine indication for medical devices. The ejection fraction is expressed as a percentage and is the ratio of left ventricular end systolic volume (ESV) and left ventricular end diastolic volume (EDV) determined by (EDV - ESV) / EDV.
+Tracings: In our dataset, for each video, the left ventricle is traced at the endocardial border at two separate time points representing end-systole and end-diastole. Each tracing is used to estimate ventricular volume by integration of ventricular area over the length of the major axis of the ventricle. The expert tracings are represented by a collection of paired coordinates corresponding to each human tracing. The first pair of coordinates represent the length and direction of the long axis of the left ventricle, and subsequent coordinate pairs represent short axis linear distances starting from the apex of the heart to the mitral apparatus. Each coordinate pair is also listed with a video file name and frame number to identify the representative frame from which the tracings match.
+Further description of the dataset is available in our NeurIPS Machine Learning 4 Health workshop paper.
+Code
+Our code is available here.
+Accessing Dataset
+Stanford University School of Medicine EchoNet-Dynamic Dataset Research Use Agreement
+By registering for downloads from the EchoNet-Dynamic Dataset, you are agreeing to this Research Use Agreement, as well as to the Terms of Use of the Stanford University School of Medicine website as posted and updated periodically at http://www.stanford.edu/site/terms/.
+1. Permission is granted to view and use the EchoNet-Dynamic Dataset without charge for personal, non-commercial research purposes only. Any commercial use, sale, or other monetization is prohibited.
+2. Other than the rights granted herein, the Stanford University School of Medicine (“School of Medicine”) retains all rights, title, and interest in the EchoNet-Dynamic Dataset.
+3. You may make a verbatim copy of the EchoNet-Dynamic Dataset for personal, non-commercial research use as permitted in this Research Use Agreement. If another user within your organization wishes to use the EchoNet-Dynamic Dataset, they must register as an individual user and comply with all the terms of this Research Use Agreement.
+4. YOU MAY NOT DISTRIBUTE, PUBLISH, OR REPRODUCE A COPY of any portion or all of the EchoNet-Dynamic Dataset to others without specific prior written permission from the School of Medicine.
+5. YOU MAY NOT SHARE THE DOWNLOAD LINK to the EchoNet-Dynamic dataset to others. If another user within your organization wishes to use the EchoNet-Dynamic Dataset, they must register as an individual user and comply with all the terms of this Research Use Agreement.
+6. You must not modify, reverse engineer, decompile, or create derivative works from the EchoNet-Dynamic Dataset. You must not remove or alter any copyright or other proprietary notices in the EchoNet-Dynamic Dataset.
+7. The EchoNet-Dynamic Dataset has not been reviewed or approved by the Food and Drug Administration, and is for non-clinical, Research Use Only. In no event shall data or images generated through the use of the EchoNet-Dynamic Dataset be used or relied upon in the diagnosis or provision of patient care.
+8. THE ECHONET-DYNAMIC DATASET IS PROVIDED "AS IS," AND STANFORD UNIVERSITY AND ITS COLLABORATORS DO NOT MAKE ANY WARRANTY, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, NOR DO THEY ASSUME ANY LIABILITY OR RESPONSIBILITY FOR THE USE OF THIS ECHONET-DYNAMIC DATASET.
+9. You will not make any attempt to re-identify any of the individual data subjects. Re-identification of individuals is strictly prohibited. Any re-identification of any individual data subject shall be immediately reported to the School of Medicine.
+10. Any violation of this Research Use Agreement or other impermissible use shall be grounds for immediate termination of use of this EchoNet-Dynamic Dataset. In the event that the School of Medicine determines that the recipient has violated this Research Use Agreement or other impermissible use has been made, the School of Medicine may direct that the undersigned data recipient immediately return all copies of the EchoNet-Dynamic Dataset and retain no copies thereof even if you did not cause the violation or impermissible use.
+In consideration for your agreement to the terms and conditions contained here, Stanford grants you permission to view and use the EchoNet-Dynamic Dataset for personal, non-commercial research. You may not otherwise copy, reproduce, retransmit, distribute, publish, commercially exploit or otherwise transfer any material.
+Limitation of Use
+You may use EchoNet-Dynamic Dataset for legal purposes only.
+You agree to indemnify and hold Stanford harmless from any claims, losses or damages, including legal fees, arising out of or resulting from your use of the EchoNet-Dynamic Dataset or your violation or role in violation of these Terms. You agree to fully cooperate in Stanford’s defense against any such claims. These Terms shall be governed by and interpreted in accordance with the laws of California.
+Access the dataset via the Stanford Artificial Intelligence in Medicine and Imaging (AIMI) Center Shared Datasets Portal.
+Paper
+Video-based AI for beat-to-beat assessment of cardiac function.
+David Ouyang, Bryan He, Amirata Ghorbani, Neal Yuan, Joseph Ebinger, Curt P. Langlotz, Paul A. Heidenreich, Robert A. Harrington, David H. Liang, Euan A. Ashley, and James Y. Zou. Nature (2020)
+For inquiries, contact us at ouyangd@stanford.edu.

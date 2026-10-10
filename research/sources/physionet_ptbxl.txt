@@ -1,0 +1,301 @@
+PTB-XL, a large publicly available electrocardiography dataset v1.0.3
+Menu
+Share
+About
+FAQs
+Explore
+Data
+View datasets
+Software
+View software
+Challenges
+View challenges
+Tutorials
+View tutorials
+Cancel
+Search
+Search PhysioNet
+Log in
+Share
+About
+FAQs
+Data
+View datasets
+Software
+View software
+Challenges
+View challenges
+Tutorials
+View tutorials
+Database
+Open Access
+PTB-XL, a large publicly available electrocardiography dataset
+Patrick Wagner ,
+Nils Strodthoff ,
+Ralf-Dieter Bousseljot ,
+Wojciech Samek ,
+Tobias Schaeffter
+Published Nov. 9, 2022
+·
+Version 1.0.3
+When using this resource, please cite:
+Cite
+Copy BibTeX
+Wagner, P., Strodthoff, N., Bousseljot, R., Samek, W., & Schaeffter, T. (2022). PTB-XL, a large publicly available electrocardiography dataset (version 1.0.3). PhysioNet. RRID:SCR_007345. https://doi.org/10.13026/kfzx-aw45
+@article{PhysioNet-ptb-xl-1.0.3,
+author = {Wagner, Patrick and Strodthoff, Nils and Bousseljot, Ralf-Dieter and Samek, Wojciech and Schaeffter, Tobias},
+title = {{PTB-XL, a large publicly available electrocardiography dataset}},
+journal = {{PhysioNet}},
+year = {2022},
+month = nov,
+note = {Version 1.0.3},
+doi = {10.13026/kfzx-aw45},
+url = {https://doi.org/10.13026/kfzx-aw45}
+}
+Cite
+×
+MLA
+Wagner, Patrick, et al. "PTB-XL, a large publicly available electrocardiography dataset" (version 1.0.3). PhysioNet (2022). RRID:SCR_007345. https://doi.org/10.13026/kfzx-aw45
+APA
+Wagner, P., Strodthoff, N., Bousseljot, R., Samek, W., & Schaeffter, T. (2022). PTB-XL, a large publicly available electrocardiography dataset (version 1.0.3). PhysioNet. RRID:SCR_007345. https://doi.org/10.13026/kfzx-aw45
+Chicago
+Wagner, Patrick, Strodthoff, Nils, Bousseljot, Ralf-Dieter, Samek, Wojciech, and Tobias Schaeffter. "PTB-XL, a large publicly available electrocardiography dataset" (version 1.0.3). PhysioNet (2022). RRID:SCR_007345. https://doi.org/10.13026/kfzx-aw45
+Harvard
+Wagner, P., Strodthoff, N., Bousseljot, R., Samek, W., and Schaeffter, T. (2022) 'PTB-XL, a large publicly available electrocardiography dataset' (version 1.0.3), PhysioNet. RRID:SCR_007345. Available at: https://doi.org/10.13026/kfzx-aw45
+Vancouver
+Wagner P, Strodthoff N, Bousseljot R, Samek W, Schaeffter T. PTB-XL, a large publicly available electrocardiography dataset (version 1.0.3). PhysioNet. 2022. RRID:SCR_007345. Available from: https://doi.org/10.13026/kfzx-aw45
+BibTeX
+Copy
+@article{PhysioNet-ptb-xl-1.0.3,
+author = {Wagner, Patrick and Strodthoff, Nils and Bousseljot, Ralf-Dieter and Samek, Wojciech and Schaeffter, Tobias},
+title = {{PTB-XL, a large publicly available electrocardiography dataset}},
+journal = {{PhysioNet}},
+year = {2022},
+month = nov,
+note = {Version 1.0.3},
+doi = {10.13026/kfzx-aw45},
+url = {https://doi.org/10.13026/kfzx-aw45}
+}
+Close
+Additionally, please cite the original publication:
+Wagner, P., Strodthoff, N., Bousseljot, R.-D., Kreiseler, D., Lunze, F.I., Samek, W., Schaeffter, T. (2020), PTB-XL: A Large Publicly Available ECG Dataset. Scientific Data. https://doi.org/10.1038/s41597-020-0495-6
+Please include the standard citation for PhysioNet:
+Cite
+Copy BibTeX
+Pollard, T., Moody, B. E., Lehman, L., Gow, B., Fernandes, C., Xie, C., Johnson, A., Mark, R. G., & Heldt, T. (2026). PhysioNet as a global platform for biomedical research. Nature Health. https://doi.org/10.1038/s44360-026-00096-z. Available from: https://rdcu.be/faatM
+@article{pollard_physionet_2026, title = {{PhysioNet} as a global platform for biomedical research}, volume = {1}, issn = {3005-0693}, url = {https://doi.org/10.1038/s44360-026-00096-z}, doi = {10.1038/s44360-026-00096-z}, abstract = {Twenty-five years after its first public repository was established, the PhysioNet resource for biomedical and clinical data has enabled tens of thousands of research papers. Further efforts are ongoing to advance secure data sharing, community engagement and scalable research infrastructure.}, number = {8}, journal = {Nature Health}, author = {Pollard, Tom and Moody, Benjamin E. and Lehman, Li-wei H. and Gow, Brian J. and Fernandes, Chrystinne and Xie, Chen and Johnson, Alistair and Mark, Roger G. and Heldt, Thomas}, month = aug, year = {2026}, pages = {792--795},}
+Cite
+×
+APA
+Pollard, T., Moody, B. E., Lehman, L., Gow, B., Fernandes, C., Xie, C., Johnson, A., Mark, R. G., & Heldt, T. (2026). PhysioNet as a global platform for biomedical research. Nature Health. https://doi.org/10.1038/s44360-026-00096-z. Available from: https://rdcu.be/faatM
+MLA
+Pollard, Tom, et al. “PhysioNet as a Global Platform for Biomedical Research.” Nature Health, 2026, https://doi.org/10.1038/s44360-026-00096-z. Available from: https://rdcu.be/faatM
+CHICAGO
+Pollard, Tom, Benjamin E. Moody, Li-wei Lehman, Brian Gow, Chrystinne Fernandes, Chen Xie, Alistair Johnson, Roger G. Mark, and Thomas Heldt. “PhysioNet as a Global Platform for Biomedical Research.” Nature Health (2026). https://doi.org/10.1038/s44360-026-00096-z.i Available from: https://rdcu.be/faatM
+HARVARD
+Pollard, T., Moody, B.E., Lehman, L., Gow, B., Fernandes, C., Xie, C., Johnson, A., Mark, R.G. and Heldt, T., 2026. PhysioNet as a global platform for biomedical research. Nature Health. Available at: https://doi.org/10.1038/s44360-026-00096-z. Available from: https://rdcu.be/faatM
+VANCOUVER
+Pollard T, Moody BE, Lehman L, Gow B, Fernandes C, Xie C, et al. PhysioNet as a global platform for biomedical research. Nature Health. 2026. doi:10.1038/s44360-026-00096-z. Available from: https://rdcu.be/faatM
+BibTeX
+Copy
+@article{pollard_physionet_2026, title = {{PhysioNet} as a global platform for biomedical research}, volume = {1}, issn = {3005-0693}, url = {https://doi.org/10.1038/s44360-026-00096-z}, doi = {10.1038/s44360-026-00096-z}, abstract = {Twenty-five years after its first public repository was established, the PhysioNet resource for biomedical and clinical data has enabled tens of thousands of research papers. Further efforts are ongoing to advance secure data sharing, community engagement and scalable research infrastructure.}, number = {8}, journal = {Nature Health}, author = {Pollard, Tom and Moody, Benjamin E. and Lehman, Li-wei H. and Gow, Brian J. and Fernandes, Chrystinne and Xie, Chen and Johnson, Alistair and Mark, Roger G. and Heldt, Thomas}, month = aug, year = {2026}, pages = {792--795},}
+Close
+Abstract
+Electrocardiography (ECG) is a key diagnostic tool to assess the cardiac condition of a patient. Automatic ECG interpretation algorithms as diagnosis support systems promise large reliefs for the medical personnel - only on the basis of the number of ECGs that are routinely taken. However, the development of such algorithms requires large training datasets and clear benchmark procedures. In our opinion, both aspects are not covered satisfactorily by existing freely accessible ECG datasets.
+The PTB-XL ECG dataset is a large dataset of 21799 clinical 12-lead ECGs from 18869 patients of 10 second length. The raw waveform data was annotated by up to two cardiologists, who assigned potentially multiple ECG statements to each record. The in total 71 different ECG statements conform to the SCP-ECG standard and cover diagnostic, form, and rhythm statements. To ensure comparability of machine learning algorithms trained on the dataset, we provide recommended splits into training and test sets. In combination with the extensive annotation, this turns the dataset into a rich resource for the training and the evaluation of automatic ECG interpretation algorithms. The dataset is complemented by extensive metadata on demographics, infarction characteristics, likelihoods for diagnostic ECG statements as well as annotated signal properties.
+Background
+The waveform data underlying the PTB-XL ECG dataset was collected with devices from Schiller AG over the course of nearly seven years between October 1989 and June 1996. With the acquisition of the original database from Schiller AG, the full usage rights were transferred to the PTB. The records were curated and converted into a structured database within a long-term project at the Physikalisch-Technische Bundesanstalt (PTB). The database was used in a number of publications, see e.g. [1,2], but the access remained restricted until now. During the public release process in 2019, the existing database was streamlined with particular regard to usability and accessibility for the machine learning community. Waveform and metadata were converted to open data formats that can easily processed by standard software.
+Methods
+Data Acquisition
+1. Raw signal data was recorded and stored in a proprietary compressed format. For all signals, we provide the standard set of 12 leads (I, II, III, AVL, AVR, AVF, V1, ..., V6) with reference electrodes on the right arm.
+2. The corresponding general metadata (such as age, sex, weight and height) was collected in a database.
+3. Each record was annotated with a report string (generated by cardiologist or automatic interpretation by ECG-device) which was converted into a standardized set of SCP-ECG statements (scp_codes). For most records also the heart’s axis (heart_axis) and infarction stadium (infarction_stadium1 and infarction_stadium2, if present) were extracted.
+4. A large fraction of the records was validated by a second cardiologist.
+5. All records were validated by a technical expert focusing mainly on signal characteristics.
+Data Preprocessing
+ECGs and patients are identified by unique identifiers (ecg_id and patient_id). Personal information in the metadata, such as names of validating cardiologists, nurses and recording site (hospital etc.) of the recording was pseudonymized. The date of birth only as age at the time of the ECG recording, where ages of more than 89 years appear in the range of 300 years in compliance with HIPAA standards. Furthermore, all ECG recording dates were shifted by a random offset for each patient. The ECG statements used for annotating the records follow the SCP-ECG standard [3].
+Data Description
+In general, the dataset is organized as follows:
+ptbxl
+├── ptbxl_database.csv
+├── scp_statements.csv
+├── records100
+│ ├── 00000
+│ │ ├── 00001_lr.dat
+│ │ ├── 00001_lr.hea
+│ │ ├── ...
+│ │ ├── 00999_lr.dat
+│ │ └── 00999_lr.hea
+│ ├── ...
+│ └── 21000
+│ ├── 21001_lr.dat
+│ ├── 21001_lr.hea
+│ ├── ...
+│ ├── 21837_lr.dat
+│ └── 21837_lr.hea
+└── records500
+├── 00000
+│ ├── 00001_hr.dat
+│ ├── 00001_hr.hea
+│ ├── ...
+│ ├── 00999_hr.dat
+│ └── 00999_hr.hea
+├── ...
+└── 21000
+├── 21001_hr.dat
+├── 21001_hr.hea
+├── ...
+├── 21837_hr.dat
+└── 21837_hr.hea
+The dataset comprises 21799 clinical 12-lead ECG records of 10 seconds length from 18869 patients, where 52% are male and 48% are female with ages covering the whole range from 0 to 95 years (median 62 and interquantile range of 22). The value of the dataset results from the comprehensive collection of many different co-occurring pathologies, but also from a large proportion of healthy control samples. The distribution of diagnosis is as follows, where we restrict for simplicity to diagnostic statements aggregated into superclasses (note: sum of statements exceeds the number of records because of potentially multiple labels per record):
+#Records
+Superclass
+Description
+9514
+NORM
+Normal ECG
+5469
+MI
+Myocardial Infarction
+5235
+STTC
+ST/T Change
+4898
+CD
+Conduction Disturbance
+2649
+HYP
+Hypertrophy
+The waveform files are stored in WaveForm DataBase (WFDB) format with 16 bit precision at a resolution of 1μV/LSB and a sampling frequency of 500Hz (records500/). For the user’s convenience we also release a downsampled versions of the waveform data at a sampling frequency of 100Hz (records100/).
+All relevant metadata is stored in ptbxl_database.csv with one row per record identified by ecg_id. It contains 28 columns that can be categorized into:
+1. Identifiers: Each record is identified by a unique ecg_id. The corresponding patient is encoded via patient_id. The paths to the original record (500 Hz) and a downsampled version of the record (100 Hz) are stored in filename_hr and filename_lr.
+2. General Metadata: demographic and recording metadata such as age, sex, height, weight, nurse, site, device and recording_date
+3. ECG statements: core components are scp_codes (SCP-ECG statements as a dictionary with entries of the form statement: likelihood, where likelihood is set to 0 if unknown) and report (report string). Additional fields are heart_axis, infarction_stadium1, infarction_stadium2, validated_by, second_opinion, initial_autogenerated_report and validated_by_human.
+4. Signal Metadata: signal quality such as noise (static_noise and burst_noise), baseline drifts (baseline_drift) and other artifacts such as electrodes_problems. We also provide extra_beats for counting extra systoles and pacemaker for signal patterns indicating an active pacemaker.
+5. Cross-validation Folds: recommended 10-fold train-test splits (strat_fold) obtained via stratified sampling while respecting patient assignments, i.e. all records of a particular patient were assigned to the same fold. Records in fold 9 and 10 underwent at least one human evaluation and are therefore of a particularly high label quality. We therefore propose to use folds 1-8 as training set, fold 9 as validation set and fold 10 as test set.
+All information related to the used annotation scheme is stored in a dedicated scp_statements.csv that was enriched with mappings to other annotation standards such as AHA, aECGREFID, CDISC and DICOM. We provide additional side-information such as the category each statement can be assigned to (diagnostic, form and/or rhythm). For diagnostic statements, we also provide a proposed hierarchical organization into diagnostic_class and diagnostic_subclass.
+Usage Notes
+In example_physionet.py we provide a minimal usage example that shows how to load waveform data (numpy-arrays X_train and X_test) and labels (y_train and y_test) making use of the proposed train-test split. For illustration, we use diagnostic subclass statements as labels based on the assignments in scp_statements.csv. Benchmarking procedures for the dataset are described in [4].
+Release Notes
+1.0.3 Removed two further duplicates (former triplicates). Decided to report consensus labels for all duplicate records (also those modified in 1.0.2) as the samples were annotated as independent samples. The original labels of all duplicate records were appended to the "record" field for later reference.
+1.0.2 Removed 36 records with identical raw waveform data (keeping in doubt records with higher ECG ID and preferentially removing records from test folds 9 and 10 to allow a proper evaluation of models trained on previous versions of the dataset). Details can be found in release_notes_v102.txt.
+1.0.1 Fixed mismatching IDs between waveform data and metadata. Same content as the original release.
+1.0.0 Initial release of the dataset.
+Ethics
+The Institutional Ethics Committee approved the publication of the anonymous data in an open-access database (PTB-2020-1).
+Acknowledgements
+We thank Dr. Lothar Schmitz for numerous annotations and providing medical expertise and Dr. Hans Koch for actuating and managing the preparation of the original database. This work was supported by the Bundesministerium für Bildung und Forschung (BMBF) through the Berlin Big Data Center under Grant 01IS14013A and the Berlin Center for Machine Learning under Grant 01IS18037I and by the EMPIR project 18HLT07 MedalCare. The EMPIR initiative is cofunded by the European Union's Horizon 2020 research and innovation program and the EMPIR Participating States.
+Conflicts of Interest
+The authors have no conflicts of interest to declare.
+References
+Bousseljot, R., Kreiseler, D. (2000). "Waveform recognition with 10,000 ECGs". Computers in Cardiology 27, 331–334.
+SO Central Secretary (2009). "Health informatics – Standard communication protocol– Part 91064: Computer-assisted electrocardiography". Standard ISO 11073-91064:2009, International Organization for Standardization, Geneva.
+Bousseljot, R., Kreiseler, D., Schnabel, A. (1995). "Nutzung der EKG-Signaldatenbank CARDIODAT der PTB über das Internet". Biomedizinische Technik/Biomedical Engineering 317–318.
+Strodthoff, N., Wagner, P., Schaeffter, T., Samek, W. (2021). "Deep Learning for ECG Analysis: Benchmarks and Insights from PTB-XL". IEEE Journal of Biomedical and Health Informatics 25, no. 5, 1519-1528.
+Contents
+Abstract
+Background
+Methods
+Data Description
+Usage Notes
+Release Notes
+Ethics
+Acknowledgements
+Conflicts of Interest
+References
+Files
+Share
+Email
+LinkedIn
+Reddit
+Access
+Access Policy
+Anyone can access the files, as long as they conform to the terms of the specified license.
+License
+Creative Commons Attribution 4.0 International Public License
+Discovery
+DOI (v1.0.3)
+10.13026/kfzx-aw45
+DOI (latest)
+10.13026/6sec-a640
+Topics
+ptb-xl ptb electrocardiography ecg
+Project Views
+Current Version
+4571
+All Versions
+5614
+View Details
+Corresponding Author
+You must be logged in to view the contact information.
+Versions
+1.0.0
+April 17, 2020
+1.0.1
+April 24, 2020
+1.0.2
+Aug. 18, 2022
+1.0.3
+Nov. 9, 2022
+Files
+Total uncompressed size: 3.0 GB.
+Access the files
+Download
+the ZIP file (1.7 GB)
+Download the files using your terminal:
+wget -r -N -c -np https://physionet.org/files/ptb-xl/1.0.3/
+Download the files using AWS command line tools:
+aws s3 sync --no-sign-request s3://physionet-open/ptb-xl/1.0.3/ DESTINATION
+Visualize waveforms
+Folder Navigation:
+<base>
+Name
+Size
+Modified
+records100
+records500
+LICENSE.txt
+(download)
+14.5 KB
+2022-11-07
+RECORDS
+(download)
+1.1 MB
+2022-11-03
+SHA256SUMS.txt
+(download)
+7.9 MB
+2022-11-09
+example_physionet.py
+(download)
+1.3 KB
+2020-04-23
+ptbxl_database.csv
+(download)
+6.3 MB
+2022-11-03
+ptbxl_v102_changelog.txt
+(download)
+6.0 KB
+2022-08-01
+ptbxl_v103_changelog.txt
+(download)
+7.2 KB
+2022-11-03
+scp_statements.csv
+(download)
+9.5 KB
+2020-04-23
+Maintained by the MIT Laboratory for Computational Physiology
+Supported by the National Institute of Biomedical Imaging and Bioengineering (NIBIB), National Heart Lung and Blood Institute (NHLBI), and NIH Office of the Director under NIH grant numbers U24EB037545 and R01EB030362
+Navigation
+Discover Data
+Share Data
+About
+News
+Explore
+Data
+Software
+Challenges
+Tutorials
+Accessibility

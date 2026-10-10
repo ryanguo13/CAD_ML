@@ -1,0 +1,194 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>HMC-QU Dataset | Kaggle</title>
+  <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+  <meta name="description" content="Hamad Medical Corporation Heart Hospital &amp; Qatar University &amp; Tampere University" />
+    <meta name="keywords" content="image,classification,health,computer vision,heart conditions" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="GMhOBj2W&#x2B;yO0Gh/&#x2B;RxbGxQ==" type="text/javascript">
+    window["pageRequestStartTime"] = 1791551717386;
+    window["pageRequestEndTime"] = 1791551717473;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <script nonce="GMhOBj2W&#x2B;yO0Gh/&#x2B;RxbGxQ==" id="gsi-client" src="https://accounts.google.com/gsi/client" async defer></script>
+  <script nonce="GMhOBj2W&#x2B;yO0Gh/&#x2B;RxbGxQ==">window.KAGGLE_JUPYTERLAB_PATH = "/static/assets/jupyterlab-v4/jupyterlab-index-b4637c5d1c24dcfb.html";</script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+  <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" id="dynamic-favicon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Symbols:FILL,wght@0..1,300..700&display=block"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Symbols:FILL,wght@0..1,300..700&display=block"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="GMhOBj2W&#x2B;yO0Gh/&#x2B;RxbGxQ==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+    <script nonce="GMhOBj2W&#x2B;yO0Gh/&#x2B;RxbGxQ==" id="site-wide-recaptcha"
+      src="https://www.google.com/recaptcha/enterprise.js?render=6LcVUOAUAAAAAP8nMSGuW46uJC5Zf6-PCYKN5xxv" async defer></script>
+    <style>.grecaptcha-badge { visibility: hidden; }</style>
+
+    <link rel="canonical" href="https://www.kaggle.com/datasets/aysendegerli/hmcqu-dataset" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=997ff5eee69715e0" />
+
+  
+    
+ 
+      <script nonce="GMhOBj2W&#x2B;yO0Gh/&#x2B;RxbGxQ==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="GMhOBj2W&#x2B;yO0Gh/&#x2B;RxbGxQ==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T7QHS60L4Q', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets',
+            'user_properties': {
+                'logged_in': false,
+            }
+        });
+    </script>
+    <script nonce="GMhOBj2W&#x2B;yO0Gh/&#x2B;RxbGxQ==" async src="https://www.googletagmanager.com/gtag/js?id=G-T7QHS60L4Q"></script>
+
+
+  
+    
+    <meta property="og:url" content="https://www.kaggle.com/datasets/aysendegerli/hmcqu-dataset" />
+    <meta property="og:title" content="HMC-QU Dataset" />
+    <meta property="og:description" content="Hamad Medical Corporation Heart Hospital &amp; Qatar University &amp; Tampere University" />
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="2665027677054710" />
+
+        <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/1150480/1928681/3c281697cc0d5891e0959a3fd9dd3d48/dataset-card.png?t=2021-02-10-16-24-07" />
+        <meta property="twitter:image" content="https://storage.googleapis.com/kaggle-datasets-images/1150480/1928681/3c281697cc0d5891e0959a3fd9dd3d48/dataset-card.png?t=2021-02-10-16-24-07" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+
+
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+    <script nonce="GMhOBj2W+yO0Gh/+RxbGxQ==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"HMC-QU Dataset","description":"# 💻Implementation of [P1] along with the features extracted from the recordings available at https://github.com/degerliaysen/MultiEchoAI.\n\n# 💾For access to the dataset, please request access by sending e-mail to mkiranyaz@qu.edu.qa\n\n# **HMC-QU Dataset** \n\nThe HMC-QU benchmark dataset is created by the collaboration between Hamad Medical Corporation (HMC), Tampere University, and Qatar University. The dataset was created using the de-identified patient echocardiography from Hayatabad Medical Complex (HMC) and Indus Hospital in Pakistan and the usage of data has been approved by the local ethics board. It includes a collection of apical 4-chamber (A4C) and apical 2-chamber (A2C) view 2D echocardiography recordings obtained during the years 2018 and 2019.  \nIn total, the dataset comprises 322 echocardiography video recordings collected from 162 unique patients, including 93 myocardial infarction (MI) patients and 69 non-MI patients. It includes 162 apical 4-chamber (A4C) recordings (93 MI and 69 non-MI) and 160 apical 2-chamber (A2C) recordings (80 MI and 80 non-MI). Additionally, a subset of 109 A4C recordings provides frame-by-frame left ventricular segmentation masks for detailed left ventricular analysis.\nThe echocardiography recordings are acquired via devices from different vendors that are Phillips and GE Vivid (GE-Health-USA) ultrasound machines. The temporal resolution (frame rate per second) of the echocardiography recordings is 25 fps. The spatial resolution varies from 422x636 to 768x1024 pixels. The dataset can be utilized for both myocardial infarction (heart attack) detection and left ventricle wall segmentation purposes.\n\n##1. Detection of Myocardial Infarction \nHMC-QU is the first dataset that is shared with the research community serving myocardial infarction (MI) detection on the left ventricle wall of the heart. The recordings are from over 10,000 echos performed in a year including more than 800 cases admitted with acute ST-elevation MI. The patients with MI were treated with coronary angiogram/angioplasty after the diagnosis of acute MI with electrocardiography and cardiac enzymes evidence. The patients had echocardiography recordings obtained within 24 hours of admission or in some cases before they underwent coronary angioplasty. The subjects not diagnosed with MI underwent a required health check and investigation for other reasons in the hospital. \n\nThe ground-truth labels are provided for each myocardial segment illustrated in Figure 1 as non-MI and MI, where the MI term indicates any sign of regional wall motion abnormality, whereas the subjects without regional wall motion abnormality are assigned to non-MI. The one cardiac cycle frames are predefined for each recording. End-diastole and end-systole frames are defined according to the electrocardiography (ECG) recordings of the patients. For the patients without ECG recordings, the cardiac cycle is defined according to the frames, where the left ventricle area is the largest and smallest. \n\n###1.1. Apical 4-chamber\nThe dataset consists of 162 A4C view 2D echocardiography recordings.\n\n###1.2. Apical 2-chamber\nThe dataset consists of 160 A2C view 2D echocardiography recordings.\n\n![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F1604467%2Fb99670ba477b528312a417727c7b5c90%2F17_segments_diagram.png?generation=1699189993331577&amp;alt=media)\n\n*Figure adapted from [P1]\n\n##2. Segmentation of the Left Ventricle Wall\nA subset of 109 A4C view echocardiography recordings has their corresponding ground-truth segmentation masks for the whole left ventricle wall at each frame for one cardiac cycle. This subset includes 72 MI patients and 37 non-MI subjects. The size of the ground-truth segmentation masks is 224x224 in order to have suitable input dimensions for many state-of-the-art deep network topologies. \n\n###If you use the dataset in your research, please consider citing the publications below:\n[P1] A. Degerli, S. Kiranyaz, T. Hamid, R. Mazhar, and M. Gabbouj, “Early Myocardial Infarction Detection over Multi-view Echocardiography,” Biomedical Signal Processing and Control, vol. 87, 2024, https://doi.org/10.1016/j.bspc.2023.105448.\n[P2] A. Degerli, M. Zabihi, S. Kiranyaz, T. Hamid, R. Mazhar, R. Hamila, and M. Gabbouj, \"Early Detection of Myocardial Infarction in Low-Quality Echocardiography,\" in IEEE Access, vol. 9, pp. 34442-34453, 2021, https://doi.org/10.1109/ACCESS.2021.3059595.\n[P3] S. Kiranyaz, A. Degerli, T. Hamid, R. Mazhar, R. E. F. Ahmed, R. Abouhasera, M. Zabihi, J. Malik, R. Hamila, and M. Gabbouj, \"Left Ventricular Wall Motion Estimation by Active Polynomials for Acute Myocardial Infarction Detection,\" in IEEE Access, vol. 8, pp. 210301-210317, 2020, https://doi.org/10.1109/ACCESS.2020.3038743.\n[P4] I. Adalioglu, M. Ahishali, A. Degerli, S. Kiranyaz and M. Gabbouj, \"SAF-Net: Self-Attention Fusion...","url":"https://www.kaggle.com/aysendegerli/hmcqu-dataset","version":6,"keywords":["data type, image","task, classification","subject, health and fitness, health","technique, computer vision","subject, health and fitness, health, health conditions, heart conditions"],"license":{"@type":"CreativeWork","name":"Attribution-NonCommercial-ShareAlike 3.0 IGO (CC BY-NC-SA 3.0 IGO)","url":"https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"},"identifier":["1150480"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Person","name":"aysendegerli","url":"https://www.kaggle.com/aysendegerli","image":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/datasets/aysendegerli/hmcqu-dataset/download?datasetVersionNumber=6","contentSize":"895421 bytes"}],"commentCount":2,"dateModified":"2024-09-22T12:37:10.883Z","discussionUrl":"https://www.kaggle.com/aysendegerli/hmcqu-dataset/discussion","alternateName":"Hamad Medical Corporation Heart Hospital &amp; Qatar University &amp; Tampere University","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/1150480/1928681/3c281697cc0d5891e0959a3fd9dd3d48/dataset-card.png?t=2021-02-10-16-24-07","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":2},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":4022},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":34999},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":48}]}</script>
+
+
+  
+    
+
+  
+    
+
+
+
+    <script nonce="GMhOBj2W&#x2B;yO0Gh/&#x2B;RxbGxQ==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="GMhOBj2W&#x2B;yO0Gh/&#x2B;RxbGxQ==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="GMhOBj2W+yO0Gh/+RxbGxQ==" src="/static/assets/runtime.js?v=e97824593509890d"></script>
+  <script nonce="GMhOBj2W+yO0Gh/+RxbGxQ==" src="/static/assets/vendor.js?v=f3e86a541bb15dbb"></script>
+  <script nonce="GMhOBj2W+yO0Gh/+RxbGxQ==" src="/static/assets/app.js?v=f3baee5fe21b0761"></script>
+    <script nonce="GMhOBj2W&#x2B;yO0Gh/&#x2B;RxbGxQ==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+<body>
+  <div id="root">
+    
+
+
+
+
+
+
+
+
+<script nonce="GMhOBj2W&#x2B;yO0Gh/&#x2B;RxbGxQ==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    jax: ['input/TeX', 'output/SVG'],
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: ["Safe.js"],
+    });
+</script>
+<script type="text/javascript" nonce="GMhOBj2W&#x2B;yO0Gh/&#x2B;RxbGxQ==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    // Always use the production asset in local dev, which is served from GCS. We tried to proxy and / or serve this
+    // in a better way in localhost, but it didn't work out. See b/328073416#comment8 for details.
+    const forceProdHost = window.location.hostname === "localhost";
+    lib.src = `${forceProdHost ? "https://www.kaggle.com" : ""}/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS_SVG`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>

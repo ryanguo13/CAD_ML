@@ -1,0 +1,214 @@
+Table 2 Diagnostic documentation columns. | Scientific Data
+Skip to main content
+Thank you for visiting nature.com. You are using a browser version with limited support for CSS. To obtain
+the best experience, we recommend you use a more up to date browser (or turn off compatibility mode in
+Internet Explorer). In the meantime, to ensure continued support, we are displaying the site without styles
+and JavaScript.
+Advertisement
+View all journals
+Saved research
+Search
+Account
+Log in
+Content
+Explore content
+About the journal
+Publish with us
+Sign up for alerts
+RSS feed
+nature
+scientific data
+data descriptors
+article
+table
+Table 2 Diagnostic documentation columns.
+From: A large-scale 12-lead electrocardiogram dataset for acute coronary syndrome prediction containing 19,955 ECGs
+Column name
+Type
+Description
+Patient_id
+String
+Patient’s id.
+ecg_row_record
+String
+The corresponding row ECG file name.
+ecg_med_record
+String
+The corresponding median ECG file name.
+gender
+Integer
+Gender information, with 1 representing male and 0 representing female.
+age
+Integer
+Age of the patient.
+Time_Interval
+Integer
+Records the time interval between ECG recording and coronary angiography, with the unit specified in minutes.
+AMI
+Integer
+Indicates whether the patient has acute myocardial infarction. A value of 1 denotes the presence of the condition.
+OMI
+Integer
+Indicates whether the patient has acute occlusion myocardial infarction, defined as acute coronary occlusion with TIMI flow grade 0-1. A value of 1 denotes the presence of the condition.
+CTO
+Integer
+Indicates whether the patient has chronic total occlusion of the coronary artery, defined as a chronic (≥3 months), complete occlusion (TIMI flow grade 0 or 1). A value of 1 denotes the presence of the condition.
+PCI
+Integer
+Indicates whether the patient has undergone percutaneous coronary intervention. A value of 1 denotes that the patient has undergone the procedure.
+NSTEMI
+Integer
+Indicates an acute myocardial infarction with evidence of myocardial necrosis (elevated cardiac troponin values) but no persistent ST-segment elevation on ECG. A value of 1 denotes the presence of the condition.
+STEMI
+Integer
+Indicates an acute myocardial infarction characterized by persistent ST-segment elevation on the ECG. A value of 1 denotes the presence of the condition.
+UA
+Integer
+Indicates a clinical syndrome of myocardial ischemia without myocardial necrosis (cardiac troponin values not elevated), representing a high-risk precursor to acute myocardial infarction. A value of 1 denotes the presence of the condition.
+LM
+Integer
+Left Main, the origin of the left coronary artery. A value of 1 denotes significant stenosis with acute occlusion in OMI cases; a value of 2 denotes Chronic Total Occlusion (CTO).
+PLAD
+Integer
+Proximal LAD, proximal segment of the left anterior descending artery. A value of 1 denotes significant stenosis with acute occlusion in OMI cases; a value of 2 denotes CTO.
+MLAD
+Integer
+Mid LAD, middle segment of the left anterior descending artery. A value of 1 denotes significant stenosis with acute occlusion in OMI cases; a value of 2 denotes CTO.
+DLAD
+Integer
+Distal LAD, distal segment of the left anterior descending artery. A value of 1 denotes significant stenosis with acute occlusion in OMI cases; a value of 2 denotes CTO.
+DB
+Integer
+Diagonal Branch, a branch of the left anterior descending artery. A value of 1 denotes significant stenosis with acute occlusion in OMI cases; a value of 2 denotes CTO.
+PLCX
+Integer
+Proximal LCX, proximal segment of the left circumflex artery. A value of 1 denotes significant stenosis with acute occlusion in OMI cases; a value of 2 denotes CTO.
+MLCX
+Integer
+Mid LCX, middle segment of the left circumflex artery. A value of 1 denotes significant stenosis with acute occlusion in OMI cases; a value of 2 denotes CTO.
+DLCX
+Integer
+Distal LCX, distal segment of the left circumflex artery. A value of 1 denotes significant stenosis with acute occlusion in OMI cases; a value of 2 denotes CTO.
+OM
+Integer
+Obtuse Marginal Branch, a branch of the left circumflex artery. A value of 1 denotes significant stenosis with acute occlusion in OMI cases; a value of 2 denotes CTO.
+PRCA
+Integer
+Proximal RCA, proximal segment of the right coronary artery. A value of 1 denotes significant stenosis with acute occlusion in OMI cases; a value of 2 denotes CTO.
+MRCA
+Integer
+Mid RCA, middle segment of the right coronary artery. A value of 1 denotes significant stenosis with acute occlusion in OMI cases; a value of 2 denotes CTO.
+DRCA
+Integer
+Distal RCA, distal segment of the right coronary artery. A value of 1 denotes significant stenosis with acute occlusion in OMI cases; a value of 2 denotes CTO.
+VF_VT
+Integer
+Indicates presence of ventricular fibrillation or ventricular tachycardia
+Paced
+Integer
+Indicates paced rhythm
+Prior_PCI
+Integer
+Indicates history of prior percutaneous coronary intervention
+Back to article page
+Explore content
+Research articles
+News & Comment
+Collections
+Follow us on X
+Sign up for alerts
+RSS feed
+About the journal
+Aims and scope
+Journal Metrics
+Editors
+Policies
+Open Access Fees and Funding
+Calls for Papers
+Contact
+Publish with us
+Submission Guidelines
+Language editing services
+Open access funding
+Submit manuscript
+Search
+Search articles by subject, keyword or author
+Show results from
+All journals
+This journal
+Search
+Advanced search
+Quick links
+Explore articles by subject
+Find a job
+Guide to authors
+Editorial policies
+Scientific Data
+(Sci Data)
+ISSN 2052-4463 (online)
+nature.com footer links
+About Nature Portfolio
+About us
+Press releases
+Press office
+Contact us
+Discover content
+Journals A-Z
+Articles by subject
+protocols.io
+Nature Index
+Nature Books
+Publishing policies
+Nature portfolio policies
+Open access
+Author & Researcher services
+Reprints & permissions
+Research data
+Language editing
+Scientific editing
+Nature Masterclasses
+Research Solutions
+Libraries & institutions
+Librarian service & tools
+Librarian portal
+Open research
+Recommend to library
+Advertising & partnerships
+Advertising
+Partnerships & Services
+Media kits
+Branded
+content
+Professional development
+Nature Awards
+Nature Careers
+Nature
+Conferences
+Regional websites
+Nature Africa
+Nature China
+Nature India
+Nature Japan
+Nature Middle East
+Privacy
+Policy
+Use
+of cookies
+Your privacy choices/Manage cookies
+Legal
+notice
+Accessibility
+statement
+Terms & Conditions
+Your US state privacy rights
+© 2026 Springer Nature Limited
+Close banner
+Close
+Sign up for the Nature Briefing newsletter — what matters in science, free to your inbox daily.
+Email address
+Sign up
+I agree my information will be processed in accordance with the Nature and Springer Nature Limited Privacy Policy.
+Close banner
+Close
+Get the most important science stories of the day, free in your inbox.
+Sign up for Nature Briefing

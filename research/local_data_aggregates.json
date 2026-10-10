@@ -1,0 +1,501 @@
+{
+  "acs": {
+    "train_rows": 17960,
+    "test_rows": 1995,
+    "train_unique_patients": 17018,
+    "test_unique_patients": 1891,
+    "patient_overlap": 0,
+    "unique_records": {
+      "train": 17960,
+      "test": 1995
+    },
+    "train_fields": [
+      "Patient_id",
+      "ecg_row_record",
+      "ecg_med_record",
+      "gender",
+      "age",
+      "Time_Interval",
+      "AMI",
+      "OMI",
+      "CTO",
+      "PCI",
+      "NSTEMI",
+      "STEMI",
+      "UA",
+      "LM",
+      "PLAD",
+      "MLAD",
+      "DLAD",
+      "DB",
+      "PLCX",
+      "MLCX",
+      "DLCX",
+      "OM",
+      "PRCA",
+      "MRCA",
+      "DRCA",
+      "VF_VT",
+      "Paced",
+      "Prior_PCI"
+    ],
+    "test_fields": [
+      "Patient_id",
+      "ecg_row_record",
+      "ecg_med_record",
+      "gender",
+      "age",
+      "Time_Interval"
+    ],
+    "labels": {
+      "AMI": {
+        "0": 15281,
+        "1": 2679
+      },
+      "OMI": {
+        "0": 16809,
+        "1": 1151
+      },
+      "CTO": {
+        "0": 17003,
+        "1": 957
+      },
+      "PCI": {
+        "0": 13419,
+        "1": 4541
+      },
+      "NSTEMI": {
+        "0": 16725,
+        "1": 1235
+      },
+      "STEMI": {
+        "0": 16518,
+        "1": 1442
+      },
+      "UA": {
+        "0": 11747,
+        "1": 6213
+      },
+      "LM": {
+        "0": 17951,
+        "1": 5,
+        "2": 4
+      },
+      "PLAD": {
+        "0": 17399,
+        "2": 277,
+        "1": 284
+      },
+      "MLAD": {
+        "0": 17736,
+        "2": 108,
+        "1": 116
+      },
+      "DLAD": {
+        "0": 17932,
+        "2": 16,
+        "1": 12
+      },
+      "DB": {
+        "0": 17898,
+        "1": 35,
+        "2": 27
+      },
+      "PLCX": {
+        "0": 17693,
+        "2": 133,
+        "1": 134
+      },
+      "MLCX": {
+        "0": 17804,
+        "2": 70,
+        "1": 86
+      },
+      "DLCX": {
+        "0": 17798,
+        "1": 69,
+        "2": 93
+      },
+      "OM": {
+        "0": 17927,
+        "2": 20,
+        "1": 13
+      },
+      "PRCA": {
+        "0": 17496,
+        "2": 256,
+        "1": 208
+      },
+      "MRCA": {
+        "0": 17664,
+        "1": 136,
+        "2": 160
+      },
+      "DRCA": {
+        "0": 17719,
+        "1": 125,
+        "2": 116
+      },
+      "VF_VT": {
+        "0": 17091,
+        "1": 869
+      },
+      "Paced": {
+        "0": 17622,
+        "1": 338
+      },
+      "Prior_PCI": {
+        "0": 16637,
+        "1": 1323
+      }
+    },
+    "omi_or_cto": 2108,
+    "omi_and_cto": 0,
+    "ami_stemi_nstemi_inconsistent": 2,
+    "any_diagnostic_ami_ua": 8892,
+    "all_core_zero": 8061,
+    "waveform_files": {
+      ".dat": 19955,
+      ".hea": 19955
+    },
+    "median_files": {
+      ".med": 19955
+    },
+    "all_header_signal_rate_samples": {
+      "12 500 5000": 19955
+    },
+    "median_file_sizes": {
+      "12000": 19955
+    },
+    "missing_cells_train": {
+      "Patient_id": 0,
+      "ecg_row_record": 0,
+      "ecg_med_record": 0,
+      "gender": 0,
+      "age": 0,
+      "Time_Interval": 0,
+      "AMI": 0,
+      "OMI": 0,
+      "CTO": 0,
+      "PCI": 0,
+      "NSTEMI": 0,
+      "STEMI": 0,
+      "UA": 0,
+      "LM": 0,
+      "PLAD": 0,
+      "MLAD": 0,
+      "DLAD": 0,
+      "DB": 0,
+      "PLCX": 0,
+      "MLCX": 0,
+      "DLCX": 0,
+      "OM": 0,
+      "PRCA": 0,
+      "MRCA": 0,
+      "DRCA": 0,
+      "VF_VT": 0,
+      "Paced": 0,
+      "Prior_PCI": 0
+    },
+    "archive_csv_equals_extracted": {
+      "test.csv": true,
+      "train.csv": true
+    }
+  },
+  "mimic": {
+    "metadata_root": "D:\\dataset\\mimic-iv-ecg-diagnostic-electrocardiogram\\mimic-iv-ecg-diagnostic-electrocardiogram-matched-subset-1.0\\mimic-iv-ecg-diagnostic-electrocardiogram-matched-subset-1.0",
+    "record_fields": [
+      "subject_id",
+      "study_id",
+      "file_name",
+      "ecg_time",
+      "path"
+    ],
+    "records": 800035,
+    "unique_subjects": 161352,
+    "unique_studies": 800035,
+    "machine_rows": 800035,
+    "machine_fields": [
+      "subject_id",
+      "study_id",
+      "cart_id",
+      "ecg_time",
+      "report_0",
+      "report_1",
+      "report_2",
+      "report_3",
+      "report_4",
+      "report_5",
+      "report_6",
+      "report_7",
+      "report_8",
+      "report_9",
+      "report_10",
+      "report_11",
+      "report_12",
+      "report_13",
+      "report_14",
+      "report_15",
+      "report_16",
+      "report_17",
+      "bandwidth",
+      "filtering",
+      "rr_interval",
+      "p_onset",
+      "p_end",
+      "qrs_onset",
+      "qrs_end",
+      "t_end",
+      "p_axis",
+      "qrs_axis",
+      "t_axis"
+    ],
+    "note_link_rows": 609272,
+    "note_fields": [
+      "subject_id",
+      "study_id",
+      "waveform_path",
+      "note_id",
+      "note_seq",
+      "charttime"
+    ],
+    "sample_signal_rate_samples": [
+      "12",
+      "500",
+      "5000"
+    ],
+    "sample_leads": [
+      "I",
+      "II",
+      "III",
+      "aVR",
+      "aVF",
+      "aVL",
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6"
+    ],
+    "top_level_files": [
+      "LICENSE.txt",
+      "machine_measurements.csv",
+      "machine_measurements_data_dictionary.csv",
+      "RECORDS",
+      "record_list.csv",
+      "SHA256SUMS.txt",
+      "waveform_note_links.csv"
+    ],
+    "machine_data_dictionary": "Variable,Description聽\nsubject_id,An identifier for the subject which aligns across the MIMIC-IV database\nstudy_id,An identifier for the study which the diagnostic ECG is associated with\ncart_id,An identifier specific to the ECG cart used to collect the diagnostic ECG waveform聽\necg_time,The date that the diagnostic ECG was collected on\nreport_#,A text based cardiology report generated by the ECG machine. A variable number of report #'s are expected and can be separated by blank rows.\nbandwidth,The bandwidth of the ECG machine\nfiltering,An indicator for the filter setting\nrr_interval,Time between successive R-waves (msec)\np_onset,Time at the onset of the P-wave (msec)\np_end,Time at the end of the P-wave (msec)\nqrs_onset,Time at the beginning of the QRS complex (msec)\nqrs_end,Time at the end of the QRS complex (msec)\nt_end,Time at the end of the T-wave (msec)\np_axis,The electrical axis of the P-wave (degrees)\nqrs_axis,The electrical axis of the QRS complex (degrees)\nt_axis,The electrical axis of the T-wave (degrees)\n"
+  },
+  "ptbxl": {
+    "metadata_root": "D:\\dataset\\mimic-iv-ecg-diagnostic-electrocardiogram\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.3\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.3",
+    "rows": 21799,
+    "unique_patients": 18869,
+    "unique_ecgs": 21799,
+    "fields": [
+      "ecg_id",
+      "patient_id",
+      "age",
+      "sex",
+      "height",
+      "weight",
+      "nurse",
+      "site",
+      "device",
+      "recording_date",
+      "report",
+      "scp_codes",
+      "heart_axis",
+      "infarction_stadium1",
+      "infarction_stadium2",
+      "validated_by",
+      "second_opinion",
+      "initial_autogenerated_report",
+      "validated_by_human",
+      "baseline_drift",
+      "static_noise",
+      "burst_noise",
+      "electrodes_problems",
+      "extra_beats",
+      "pacemaker",
+      "strat_fold",
+      "filename_lr",
+      "filename_hr"
+    ],
+    "fold_counts": {
+      "3": 2192,
+      "2": 2181,
+      "5": 2174,
+      "4": 2174,
+      "7": 2176,
+      "9": 2183,
+      "10": 2198,
+      "8": 2173,
+      "6": 2173,
+      "1": 2175
+    },
+    "diagnostic_classes": {
+      "STTC": 13,
+      "NORM": 1,
+      "MI": 14,
+      "HYP": 5,
+      "CD": 11
+    },
+    "code_counts": {
+      "NORM": 9514,
+      "LVOLT": 182,
+      "SR": 16748,
+      "SBRAD": 637,
+      "IMI": 2676,
+      "ABQRS": 3327,
+      "SARRH": 772,
+      "AFLT": 73,
+      "AFIB": 1514,
+      "NDT": 1825,
+      "NST_": 767,
+      "DIG": 181,
+      "LVH": 2132,
+      "LPFB": 177,
+      "LNGQT": 117,
+      "LAFB": 1623,
+      "IRBBB": 1118,
+      "RAO/RAE": 99,
+      "RVH": 126,
+      "IVCD": 787,
+      "LMI": 201,
+      "ASMI": 2357,
+      "AMI": 353,
+      "ISCAL": 659,
+      "1AVB": 793,
+      "STACH": 826,
+      "PACE": 294,
+      "ISCLA": 140,
+      "SEHYP": 29,
+      "ISCIL": 179,
+      "ILMI": 478,
+      "ISC_": 1272,
+      "PVC": 1143,
+      "CRBBB": 541,
+      "CLBBB": 536,
+      "ALMI": 288,
+      "ANEUR": 104,
+      "ISCAS": 169,
+      "TAB_": 35,
+      "HVOLT": 62,
+      "PAC": 398,
+      "LOWT": 438,
+      "STD_": 1009,
+      "EL": 96,
+      "NT_": 423,
+      "QWAVE": 548,
+      "INVT": 294,
+      "LPR": 340,
+      "VCLVH": 875,
+      "LAO/LAE": 426,
+      "ILBBB": 77,
+      "ISCIN": 218,
+      "SVTAC": 27,
+      "INJAS": 214,
+      "INJAL": 145,
+      "IPMI": 33,
+      "ISCAN": 44,
+      "INJLA": 17,
+      "BIGU": 82,
+      "TRIGU": 20,
+      "IPLMI": 51,
+      "3AVB": 16,
+      "INJIL": 15,
+      "2AVB": 14,
+      "PRC(S)": 10,
+      "PSVT": 24,
+      "PMI": 17,
+      "STE_": 28,
+      "WPW": 79,
+      "INJIN": 18,
+      "SVARR": 157
+    },
+    "scp_fields": [
+      "",
+      "description",
+      "diagnostic",
+      "form",
+      "rhythm",
+      "diagnostic_class",
+      "diagnostic_subclass",
+      "Statement Category",
+      "SCP-ECG Statement Description",
+      "AHA code",
+      "aECG REFID",
+      "CDISC Code",
+      "DICOM Code"
+    ],
+    "header_shapes": {
+      "filename_lr": [
+        "12",
+        "100",
+        "1000"
+      ],
+      "filename_hr": [
+        "12",
+        "500",
+        "5000"
+      ]
+    },
+    "top_level_files": [
+      "example_physionet.py",
+      "LICENSE.txt",
+      "ptbxl_database.csv",
+      "ptbxl_v102_changelog.txt",
+      "ptbxl_v103_changelog.txt",
+      "RECORDS",
+      "scp_statements.csv",
+      "SHA256SUMS.txt"
+    ]
+  },
+  "gu": {
+    "Inflation ECGs.zip": {
+      "files": 74,
+      "extensions": {
+        ".ekg": 74
+      },
+      "uncompressed_bytes": 74143872,
+      "path_depth_counts": {
+        "2": 74
+      },
+      "filename_patterns": {
+        "P#.ekg": 9,
+        "P##.ekg": 65
+      }
+    },
+    "Post-inflation ECGs.zip": {
+      "files": 74,
+      "extensions": {
+        ".ekg": 74
+      },
+      "uncompressed_bytes": 49255112,
+      "path_depth_counts": {
+        "2": 74
+      },
+      "filename_patterns": {
+        "P#.ekg": 9,
+        "P##.ekg": 65
+      }
+    },
+    "Pre-inflation ECGs.zip": {
+      "files": 74,
+      "extensions": {
+        ".ekg": 74
+      },
+      "uncompressed_bytes": 52474512,
+      "path_depth_counts": {
+        "2": 74
+      },
+      "filename_patterns": {
+        "P#.ekg": 9,
+        "P##.ekg": 65
+      }
+    }
+  }
+}

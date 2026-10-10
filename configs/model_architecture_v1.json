@@ -1,0 +1,147 @@
+{
+  "name": "ecg_coronary_fusion_v1",
+  "version": "1.0",
+  "date": "2026-10-09",
+  "status": "design_specification_only_not_implemented_or_trained",
+  "documentation": "docs/模型调研与架构方案.md",
+  "input": {
+    "shape": ["batch", 12, 5000],
+    "sample_rate_hz": 500,
+    "duration_seconds": 10,
+    "units": "mV",
+    "lead_order": ["I", "II", "III", "aVR", "aVL", "aVF", "V1", "V2", "V3", "V4", "V5", "V6"],
+    "requires_complete_qualified_12_lead": true
+  },
+  "global_branch": {
+    "encoder": "ECG-FM",
+    "checkpoint": null,
+    "checkpoint_sha256": null,
+    "repo_commit": null,
+    "checkpoint_is_prerequisite": true,
+    "preprocessing": "lock_exact_native_pipeline_for_selected_public_base_checkpoint",
+    "native_sample_rate_hz": 500,
+    "native_window_seconds": 5,
+    "window_sample_ranges": [[0, 2500], [2500, 5000]],
+    "readout": "native_window_embedding_baseline_then_compare_query_pooling",
+    "embedding_dim_per_window": 768,
+    "window_aggregation": "ordered_concatenation",
+    "input_projection_dim": 1536,
+    "output_dim": 128,
+    "freeze_encoder": true,
+    "encoder_eval_mode": true,
+    "cache_dtype": "float16",
+    "cache_requires": ["record_id", "checkpoint_sha256", "preprocessing_hash", "readout_version"],
+    "trainable_query_pooling_requires_tokens": true,
+    "alternative_encoder": "ECG-CPC_S4_native_240Hz_with_query_attention_readout",
+    "parallel_second_foundation_encoder": false
+  },
+  "local_branch": {
+    "per_record_zscore": false,
+    "input_scale_mv": 1.0,
+    "learned_denoising": false,
+    "shared_across_leads": true,
+    "stem": {
+      "kernels": [15, 31, 63],
+      "channels_each": 16,
+      "stride": 2,
+      "padding": "same_ceil",
+      "activation": "GELU",
+      "output_shape": ["batch", 12, 48, 2500]
+    },
+    "residual_downsampling": {
+      "num_stages": 3,
+      "kernel": 7,
+      "stride_each": 2,
+      "channels": 64,
+      "output_shape": ["batch", 12, 64, 313]
+    },
+    "lead_attention": {
+      "blocks": 1,
+      "dim": 64,
+      "heads": 4,
+      "ffn_dim": 128,
+      "lead_embeddings": 12,
+      "attention_axis": "12_leads_at_each_time_index",
+      "pre_norm": true,
+      "residual": true
+    },
+    "temporal_convolution": {
+      "depthwise_separable": true,
+      "kernel": 9,
+      "dilations": [1, 2],
+      "channels": 64,
+      "residual": true
+    },
+    "pooling": "temporal_mean_and_max_per_lead_then_ordered_flatten",
+    "pooled_dim": 1536,
+    "amplitude_summary": {
+      "per_lead_features": ["p05_mv", "p95_mv", "std_mv", "diff_std_mv"],
+      "dim": 48,
+      "scaling": "training_partition_fixed_statistics_only",
+      "is_validated_st_feature": false
+    },
+    "projection_input_dim": 1584,
+    "output_dim": 128
+  },
+  "fusion": {
+    "type": "concatenate_then_mlp",
+    "input_dim": 256,
+    "output_dim": 128,
+    "activation": "GELU",
+    "dropout": 0.2,
+    "gating_default": false,
+    "metadata_default": false
+  },
+  "heads": {
+    "initial_primary": ["OMI"],
+    "next_secondary": ["AMI"],
+    "conditional_auxiliary": ["ACS", "CTO"],
+    "other_auxiliary_not_default": ["UA", "STEMI", "NSTEMI"],
+    "phenotype_input": "local_128d",
+    "phenotype_candidates": ["STTC", "MI_pattern", "CD", "HYP", "AFIB", "CLBBB", "CRBBB", "1AVB"],
+    "phenotype_labels_require_dictionary_audit": true,
+    "cad_head_enabled": false,
+    "cad_disabled_reason": "no_complete_verified_CAD_positive_and_negative_reference_labels",
+    "output_activation": "independent_sigmoid",
+    "strict_hierarchy": false
+  },
+  "training": {
+    "stages": ["freeze_and_cache_base_encoder", "compare_global_only_and_local_only", "PTB_development_local_pretraining", "OMI_fusion", "add_AMI_with_PTB_replay", "separate_calibration", "optional_last_block_or_LoRA"],
+    "loss": "masked_BCE_normalized_separately_per_task",
+    "initial_weights": {"OMI": 1.0, "AMI": 0.5, "PTB": 0.1},
+    "class_reweighting_default": false,
+    "microbatch_start": 8,
+    "effective_batch_target": 32,
+    "head_learning_rate_start": 0.001,
+    "optional_encoder_learning_rate_start": 0.000001,
+    "development_seeds": [17, 43, 101],
+    "do_not_fit_preprocessing_on_test": true,
+    "test_split_status": "prior_internal_test_explored_final_evaluation_protocol_must_be_locked",
+    "ptb_strict_benchmark": "separate_local_only_checkpoint_exposed_only_to_PTB_development_patients_without_FM_influence",
+    "cached_global_features_augmented_jointly": false
+  },
+  "calibration": {
+    "primary": "per_endpoint_logistic_intercept_and_slope",
+    "independent_patient_calibration_partition": true,
+    "preserve_prevalence": true,
+    "phenotype_domain": "PTB_separate_from_angiography_cohort",
+    "probabilities_sum_to_one": false
+  },
+  "resources": {
+    "observed_gpu": "NVIDIA GeForce RTX 5060",
+    "observed_gpu_memory_mib": 8151,
+    "observed_system_memory_bytes": 34184351744,
+    "trainable_parameter_budget": 1000000,
+    "parameter_count_status": "budget_not_measured",
+    "load_one_foundation_model_at_a_time": true,
+    "runtime_compatibility_verified": false
+  },
+  "echo_enabled": false,
+  "core_ablations": ["ResNet", "ECGFM_only", "ECGCPC_only", "local_only", "ECGFM_local", "ECGCPC_local", "remove_lead_attention", "remove_summary", "OMI_vs_OMI_AMI", "STMEM_ECGFM_frozen_fusion"],
+  "sources": {
+    "ecgfm": "https://doi.org/10.1093/jamiaopen/ooaf122",
+    "ecgcpc": "https://openreview.net/forum?id=xXRqWpt3Xr",
+    "acs_fusion": "https://doi.org/10.3233/SHTI250902",
+    "omi_resnet": "https://doi.org/10.1038/s41467-026-73023-1"
+  }
+}

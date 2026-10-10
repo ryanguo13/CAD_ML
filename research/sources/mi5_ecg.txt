@@ -1,0 +1,57 @@
+13. The electrocardiogram
+The 12-lead ECG remains a cornerstone in the diagnosis of myocardial infarction, particularly for rapid identification of patients with symptoms of possible myocardial infarction due to acute coronary occlusion who require immediate reperfusion (Figure 9). The working diagnosis of STEMI requires new ST-segment elevation at the J-point in at least two contiguous leads: ≥2.5 mm in men <40 years, ≥2 mm in men ≥40 years, or ≥1.5 mm in women regardless of age in leads V2–V3; and/or ≥1 mm in all other leads, in the absence of left ventricular hypertrophy or left bundle branch block (LBBB) (Table 5).
+Electrocardiographic features of acute coronary occlusion. The electrocardiographic changes associated with primary myocardial infarction due to acute coronary occlusion depend on the time of presentation from the onset of persistent symptoms. The diagnosis of ST-segment elevation myocardial infarction can be made in patients with alternative electrocardiographic changes that are suggestive of acute coronary occlusion or in those who present late where the ST-segment changes have evolved.
+Electrocardiographic findings of myocardial ischaemia or infarction.
+
+
+FEATUREDESCRIPTION OF ELECTROCARDIOGRAPHIC FINDINGS OF MYOCARDIAL ISCHAEMIA OR INFARCTION
+
+
+ST-segment elevation
+New ST-segment elevation at the J-point in two contiguous leads: ≥1 mm in all leads other than leads V2–V3 where the following apply: ≥2.5 mm in males >40 years, ≥2 mm in males ≥40 years, or ≥1.5 mm in females regardless of age, in the absence of bundle branch block and/or left ventricular hypertrophy
+
+
+ST-segment depression
+New horizontal or down sloping ST-segment depression ≥0.5 mm at the J-point in two or more contiguous leads
+
+
+Hyperacute T waves
+Symmetrical, broad T waves disproportionately large to the preceding QRS complex in two contiguous leads
+
+
+de Winter T waves
+Tall, prominent, symmetrical T waves with upsloping ST segment depression in the precordial leads
+
+
+Biphasic T waves
+Initial positive deflection followed by a negative deflection
+
+
+T-wave inversion
+New or dynamic T-wave inversion ≥1 mm in two contiguous leads
+
+
+Wellens syndrome
+Biphasic or deeply inverted T waves in leads V2 and V3
+
+
+Pathologic Q waves
+Q-wave duration ≥40 ms and/or a depth of ≥25% of the R wave in two contiguous leads
+
+
+Sgarbossa criteria
+In the presence of left bundle branch block or ventricular pacing; ST-segment elevation ≥1 mm concordant (in the same direction) with the QRS complex; ST-segment depression ≥1 mm in lead V1, V2, or V3; ST-segment elevation ≥5 mm not concordant with the QRS complex
+
+
+Ventricular arrhythmia
+Ventricular fibrillation or ventricular tachycardia
+
+
+A posterior myocardial infarction is suggested by the presence of ST-segment depression ≥1 mm in lead V1, V2, and/or V3, particularly when the R-wave amplitude is greater than the S-wave (dominant) in V1 or V2, confirmed by ST-segment elevation in the posterior leads V7 to V9 (143). A right ventricular myocardial infarction is indicated by ST-segment elevation in the right precordial leads (V3R–V6R), especially when accompanied by ST-segment elevation in lead aVR.
+Previous studies have shown that up to 1 in 4 patients managed as a NSTEMI without classical ST-segment elevation on conventional 12-lead ECG have an acute occlusion of the culprit artery (505153). In the right clinical setting, other electrocardiographic patterns may be considered equivalent to STEMI (52). These include new or presumed new left and/or right bundle branch block when accompanied by other signs of myocardial ischaemia (144). Among patients with pre-existing LBBB or ventricular pacing the presence of ST-segment elevation ≥1 mm concordant (in the same direction) with the QRS complex; ST-segment depression ≥1 mm in lead V1, V2, or V3; and ST-segment elevation ≥5 mm not concordant (in the opposite direction) with the QRS complex suggest acute coronary occlusion (Sgarbossa criteria) (145). The modified Sgarbossa criteria may improve the detection of acute coronary occlusion with LBBB or ventricular pacing by replacing the absolute discordant ST-segment elevation threshold with the proportional rule of an ST/S-wave ratio ≤0.25 (146). Further electrocardiographic patterns that suggest acute coronary occlusion include marked ST-segment depression or hyperacute T waves in V1–V2 with reciprocal changes elsewhere, de Winter pattern (upsloping ST-segment depression with tall, symmetric T waves in V2–V5) (147), Wellens syndrome (biphasic or deeply inverted T waves in V2–V3 during pain-free intervals) (148), Aslanger pattern (ST-segment elevation isolated to lead III with ST-segment depression in any of leads V4–V6 with a positive T wave), and the ‘South African flag’ sign (ST-segment elevation in leads I, aVL, and V2 and ST-segment depression in lead III) (52).
+Patients with previous coronary bypass grafts and/or complex CAD (e.g. chronic total occlusions with collateral supply) may present with acute coronary or graft occlusion without typical ST-segment elevation, and a high index of suspicion for myocardial infarction is required (144).
+ST-segment elevation is not specific to myocardial infarction and can also be found in early repolarization or other cardiac (e.g. myocarditis, pericarditis, Brugada syndrome, and Takotsubo syndrome or cardiomyopathies) and non-cardiac (e.g. pulmonary embolism, hyperkalaemia, hypothermia, elevated intracranial pressure) conditions. With an acute coronary pathology, ST-segment elevation is typically regional and often accompanied by reciprocal ST-segment depression. In contrast, in other conditions such as pericarditis or early repolarization, ST-segment elevation is often diffuse or global, not confined to a single coronary territory, and occurs without reciprocal changes (149).
+In addition to ST-segment elevation, electrocardiographic findings associated with acute myocardial ischaemia include ST-segment depression, T-wave inversion, hyperacute or biphasic T waves, pathological Q waves, and ventricular arrhythmias (Table 5). New horizontal or down-sloping ST-segment depression ≥0.5 mm and/or T-wave inversion >1 mm in two contiguous leads is suggestive of myocardial ischaemia. Global ischaemic changes (diffuse ST-segment depression along with ST-segment elevation in lead aVR) may reflect left main stem or balanced three vessel CAD. However, these electrocardiographic findings are not specific to myocardial infarction and can be observed in other cardiac and non-cardiac conditions.
+Patients who present late following myocardial infarction due to an acute coronary occlusion are more likely to have pathological Q waves in two or more contiguous leads and biphasic T waves or T-wave inversions rather than ST-segment elevation or depression—although some patients presenting late may not necessarily have developed Q waves despite an acute coronary occlusion (150). Q waves are usually permanent but may regress and disappear over months to years. The classical definition of a pathological Q wave requires a Q-wave duration ≥40 ms and/or a depth of ≥25% of the R wave in the same lead (151). While an alternative pathological Q wave definition was suggested in prior versions of the UDMI, the classical definition has a higher correlation with transmural myocardial infarction in CMR imaging studies (98).
+In the setting of secondary myocardial infarction global ischaemic changes are more common (64). More marked electrocardiographic changes, particularly ST-segment elevation and depression, that do not resolve rapidly with treatment of the underlying cause (e.g. resolution of widespread ST-segment depression after cardioversion for tachyarrhythmia) should lead to reconsideration as to whether the diagnosis is primary myocardial infarction.
+Procedure-related myocardial infarction presents with similar electrocardiographic findings as primary myocardial infarction. Early stent thrombosis often presents with classical ST-segment elevation with reciprocal ST-segment depression, while smaller procedural myocardial infarcts, such as side branch occlusion, may have more subtle or no electrocardiographic changes. Comparison with the pre-procedural ECG can be helpful. New electrocardiographic changes, such as ST-segment elevation or depression and T-wave inversion, are common after cardiac surgery and do not always indicate acute graft failure (43). For example, following cardiac surgery, post-pericardiotomy syndrome (an autoimmune inflammatory response to pericardial and pleural trauma), pneumopericardium (air in the pericardial space), and metabolic disturbances (due to haemodilution, renal dysfunction, blood products, and/or diuretics) can cause ST-segment elevation, depression, and/or T-wave changes. Furthermore, Q waves that meet the definition for a pathological Q wave can be transient early after cardiac surgery (80). The early use of cardiac imaging and invasive coronary angiography is required to confirm whether these electrocardiographic changes are due to procedure-related myocardial infarction.
